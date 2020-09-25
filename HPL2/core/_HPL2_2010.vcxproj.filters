@@ -1939,7 +1939,4 @@
       <Filter>Impl\Input</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="buildcounterinput.txt" />
-  </ItemGroup>
 </Project>

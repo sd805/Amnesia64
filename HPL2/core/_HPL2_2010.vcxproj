@@ -52,23 +52,14 @@
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\lib</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\_temp\$(Configuration)</IntDir>
-    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PostBuildEventUseInBuild>
-    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreBuildEventUseInBuild>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\lib</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">..\lib</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\_temp\$(Configuration)</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">..\_temp\$(Configuration)</IntDir>
-    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PostBuildEventUseInBuild>
-    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">true</PostBuildEventUseInBuild>
-    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PreBuildEventUseInBuild>
-    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">true</PreBuildEventUseInBuild>
-    <PreLinkEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreLinkEventUseInBuild>
-    <PreLinkEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">false</PreLinkEventUseInBuild>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
     <TargetName>HPL2_2010_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -94,13 +85,8 @@
       <AdditionalDependencies>SDL2.lib;DevIL.lib;glew32.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\dependencies\lib\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
-    <PreBuildEvent>
-      <Command>$(ProjectDir)..\redist\buildcounter buildcounterinput.txt</Command>
-    </PreBuildEvent>
-    <PreLinkEvent>
-      <Message>Compiling BuildID file</Message>
-      <Command>cl $(ProjectDir)sources\BuildID_HPL2_0_Win32.cpp   /O2 /I ".\include" /I "..\dependencies\include" /I "..\dependencies\include\AL" /I "..\dependencies\include\HaptX" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "HPL_EXPORTS" /D "MEMORY_MANAGER_ACTIVE" /FD /EHsc /MD /GS /Fo$(OutDir) /Fd$(OutDir) /W3 /nologo /c /Wp64 /Zi /TP</Command>
-    </PreLinkEvent>
+    <PreBuildEvent />
+    <PreLinkEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -119,10 +105,7 @@
       <AdditionalDependencies>SDL2.lib;DevIL.lib;glew32.lib;zlibwapi.lib;XInput.lib;User32.lib;Gdi32.lib;Shell32.lib;fbxsdk-2012.2-md.lib;Wininet.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\dependencies\lib\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
-    <PreLinkEvent>
-      <Message>Compiling BuildID file</Message>
-      <Command>cl $(ProjectDir)sources\BuildID_HPL2_0_Win32.cpp   /O2 /I ".\include" /I "..\dependencies\include" /I "..\dependencies\include\AL" /I "..\dependencies\include\HaptX" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "HPL_EXPORTS" /D "MEMORY_MANAGER_ACTIVE" /FD /EHsc /MD /GS /Fo$(OutDir) /Fd$(OutDir) /W3 /nologo /c /Wp64 /Zi /TP</Command>
-    </PreLinkEvent>
+    <PreLinkEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">
     <ClCompile>
@@ -141,10 +124,7 @@
       <AdditionalDependencies>SDL2.lib;DevIL.lib;glew32.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\dependencies\lib\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
-    <PreLinkEvent>
-      <Message>Compiling BuildID file</Message>
-      <Command>cl $(ProjectDir)sources\BuildID_HPL2_0_Win32.cpp   /O2 /I ".\include" /I "..\dependencies\include" /I "..\dependencies\include\AL" /I "..\dependencies\include\HaptX" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "HPL_EXPORTS" /D "MEMORY_MANAGER_ACTIVE" /FD /EHsc /MD /GS /Fo$(OutDir) /Fd$(OutDir) /W3 /nologo /c /Wp64 /Zi /TP</Command>
-    </PreLinkEvent>
+    <PreLinkEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\impl\GamepadSDL2.h" />
@@ -770,22 +750,6 @@
     <ClCompile Include="sources\generate\Generate.cpp" />
     <ClCompile Include="sources\generate\GenerateTypes.cpp" />
     <ClCompile Include="sources\generate\VoxelMap.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="buildcounterinput.txt">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)../redist/buildcounter %(Filename)%(Extension)
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VersionData_HPL2_0.h ;VersionData_HPL2_0_Win32.cpp;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">true</ExcludedFromBuild>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)../redist/buildcounter %(Filename)%(Extension)
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">$(ProjectDir)../redist/buildcounter %(Filename)%(Extension)
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">VersionData_HPL2_0.h ;VersionData_HPL2_0_Win32.cpp;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_NoHPLMain|Win32'">VersionData_HPL2_0.h ;VersionData_HPL2_0_Win32.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
