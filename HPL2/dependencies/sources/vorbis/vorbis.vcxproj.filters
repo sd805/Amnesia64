@@ -81,9 +81,6 @@
     <ClCompile Include="synthesis.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tone.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="vorbisenc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
