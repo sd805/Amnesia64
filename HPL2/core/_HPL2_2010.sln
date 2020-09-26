@@ -24,6 +24,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "png", "..\dependencies\sour
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpeg", "..\dependencies\sources\jpeg\jpeg.vcxproj", "{8C09B653-1480-454A-9A8F-16B4DF4B69AF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DevIL", "..\dependencies\sources\DevIL\DevIL.vcxproj", "{A33D83B6-5377-4386-A670-9096DB288370}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -118,6 +120,14 @@ Global
 		{8C09B653-1480-454A-9A8F-16B4DF4B69AF}.Release|Win32.Build.0 = Release|Win32
 		{8C09B653-1480-454A-9A8F-16B4DF4B69AF}.Release|x64.ActiveCfg = Release|x64
 		{8C09B653-1480-454A-9A8F-16B4DF4B69AF}.Release|x64.Build.0 = Release|x64
+		{A33D83B6-5377-4386-A670-9096DB288370}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A33D83B6-5377-4386-A670-9096DB288370}.Debug|Win32.Build.0 = Debug|Win32
+		{A33D83B6-5377-4386-A670-9096DB288370}.Debug|x64.ActiveCfg = Debug|x64
+		{A33D83B6-5377-4386-A670-9096DB288370}.Debug|x64.Build.0 = Debug|x64
+		{A33D83B6-5377-4386-A670-9096DB288370}.Release|Win32.ActiveCfg = Release|Win32
+		{A33D83B6-5377-4386-A670-9096DB288370}.Release|Win32.Build.0 = Release|Win32
+		{A33D83B6-5377-4386-A670-9096DB288370}.Release|x64.ActiveCfg = Release|x64
+		{A33D83B6-5377-4386-A670-9096DB288370}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
