@@ -225,7 +225,7 @@ ILboolean iLoadIffInternal(void)
 
 		// Read tiles
 		while ( (tileImage < tiles) || (tileZ < tiles)) {
-			char	 *tileData;
+			char	 *tileData = NULL;
 			ILushort x1, x2, y1, y2, tile_width, tile_height;
 			ILuint remainingDataSize;
 			ILushort	tile_area;
