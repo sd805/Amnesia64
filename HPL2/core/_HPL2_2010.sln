@@ -8,6 +8,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Newton", "..\dependencies\s
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL2", "..\dependencies\sources\SDL2\SDL2.vcxproj", "{A748AEF9-9068-401D-AB2B-196FDF92F5CC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\dependencies\sources\zlib\zlib.vcxproj", "{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -38,6 +40,14 @@ Global
 		{A748AEF9-9068-401D-AB2B-196FDF92F5CC}.Release|Win32.Build.0 = Release|Win32
 		{A748AEF9-9068-401D-AB2B-196FDF92F5CC}.Release|x64.ActiveCfg = Release|x64
 		{A748AEF9-9068-401D-AB2B-196FDF92F5CC}.Release|x64.Build.0 = Release|x64
+		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Debug|Win32.Build.0 = Debug|Win32
+		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Debug|x64.ActiveCfg = Debug|x64
+		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Debug|x64.Build.0 = Debug|x64
+		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Release|Win32.ActiveCfg = Release|Win32
+		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Release|Win32.Build.0 = Release|Win32
+		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Release|x64.ActiveCfg = Release|x64
+		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
