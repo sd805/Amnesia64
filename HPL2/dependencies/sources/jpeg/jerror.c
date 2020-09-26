@@ -23,6 +23,8 @@
 #include <windows.h>
 #endif
 
+#include <stdlib.h> // _exit
+
 /* this is not a core library module, so it doesn't define JPEG_INTERNALS */
 #include "jinclude.h"
 #include "jpeglib.h"
@@ -76,7 +78,7 @@ error_exit (j_common_ptr cinfo)
   /* Let the memory manager delete any temp files before we die */
   jpeg_destroy(cinfo);
 
-  exit(EXIT_FAILURE);
+  _exit(EXIT_FAILURE);
 }
 
 

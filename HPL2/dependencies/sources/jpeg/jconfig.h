@@ -31,6 +31,12 @@ typedef unsigned char boolean;
 #define HAVE_BOOLEAN		/* prevent jmorecfg.h from redefining it */
 #endif
 
+#define HAVE_STDDEF_H
+#define HAVE_STDLIB_H
+#define HAVE_PROTOTYPES
+#define HAVE_UNSIGNED_CHAR
+#define HAVE_UNSIGNED_SHORT
+
 #ifdef JPEG_INTERNALS
 
 #undef RIGHT_SHIFT_IS_UNSIGNED

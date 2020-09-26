@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ckconfig.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="jaricom.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -139,15 +136,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="jidctint.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="jmemansi.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="jmemmgr.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="jmemname.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="jmemnobs.c">
