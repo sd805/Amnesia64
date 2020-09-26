@@ -60,7 +60,7 @@ SSE3
 #undef RESTRICT_KEYWORD
 
 
-#cmakedefine WORDS_BIGENDIAN @WORDS_BIGENDIAN@
+#undef WORDS_BIGENDIAN
 
 
 /* assorted memory management stuff */
@@ -121,7 +121,7 @@ SSE3
 
 /* exr support (EXR is a HDR image file format standardized by Industrial
    Light and Magic. OpenEXR powered) */
-#cmakedefine IL_NO_EXR @IL_NO_EXR@
+#undef IL_NO_EXR
 
 /* fits support (FITS (Flexible Image Transport System) is used for storing
    scientific images and is used extensively in astronomy.) */
@@ -157,15 +157,15 @@ SSE3
 
 /* jp2 support (JP2 (JPEG 2000) is a better, but not so widespread,
    alternative to JPEG. JasPer powered) */
-#cmakedefine IL_NO_JP2 @IL_NO_JP2@
+#undef IL_NO_JP2
 
 /* jpeg support (JPEG is most common lossy format. libjpeg powered) */
-#cmakedefine IL_NO_JPG @IL_NO_JPG@
+#undef IL_NO_JPG
 
 /* lcms support () */
-#cmakedefine IL_NO_LCMS @IL_NO_LCMS@
+#undef IL_NO_LCMS
 /* LCMS: include lcms.h instead of lcms/lcms.h (implicit on windows) */
-#cmakedefine LCMS_NODIRINCLUDE @LCMS_NODIRINCLUDE@
+#undef LCMS_NODIRINCLUDE
 
 /* lif support (LIF is the image format of the game Homeworld.) */
 #undef IL_NO_LIF
@@ -175,7 +175,7 @@ SSE3
 
 /* mng support (MNG is basically the animated version of PNG but is not
    widespread.) */
-#cmakedefine IL_NO_MNG @IL_NO_MNG@
+#undef IL_NO_MNG
 
 /* mp3 support (MP3 (MPEG-1 Audio Layer 3) sometimes have images in them, such
    as cover art.) */
@@ -196,7 +196,7 @@ SSE3
 
 /* png support (PNG is a smart, loseless and even open format. libpng
    powered.) */
-#cmakedefine IL_NO_PNG @IL_NO_PNG@
+#undef IL_NO_PNG
 
 /* pnm support (PNM (Portable aNy Map format) is considered the
    least-common-denominator for converting pixmap, graymap, or bitmap files
@@ -235,13 +235,13 @@ SSE3
 
 /* tiff support (TIFF is a lossless format supporting greater color depths.
    libtiff powered) */
-#cmakedefine IL_NO_TIF @IL_NO_TIF@
+#undef IL_NO_TIF
 
 /* tpl support (TPL is the format used by many GameCube and Wii games.) */
 #undef IL_NO_TPL
 
 /* utx support (UTX is the format used in the Unreal Tournament game series.) */
-#cmakedefine IL_NO_UTX @IL_NO_UTX@
+#undef IL_NO_UTX
 
 /* vtf support (VTF (Valve Texture Format) is used by games based on Valve's
    Source engine.) */
@@ -260,16 +260,16 @@ SSE3
 /* wdp support (WDP is Microsoft's successor to JPEG, able to store many
    different image types either lossy or losslessly, also known as HD Photo.)
    */
-#cmakedefine IL_NO_WDP %IL_NO_WDP%
+#undef IL_NO_WDP
 
 /* xpm support (XPM (X PixMap) is an ASCII-based image used in X Windows.) */
 #undef IL_NO_XPM
 
 /* Define if you have nvidia texture tools library installed */
-#cmakedefine IL_USE_DXTC_NVIDIA %IL_USE_DXTC_NVIDIA%
+#undef IL_USE_DXTC_NVIDIA
 
 /* Define if you have libsquish installed */
-#cmakedefine IL_USE_DXTC_SQUISH %IL_USE_DXTC_SQUISH%
+#undef IL_USE_DXTC_SQUISH
 
 
 

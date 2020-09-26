@@ -40,7 +40,7 @@ extern "C" {
 
 
 // If we do not want support for game image formats, this define removes them all.
-#ifdef IL_NO_GAMES
+//#ifdef IL_NO_GAMES
 	#define IL_NO_BLP
 	#define IL_NO_DOOM
 	#define IL_NO_FTX
@@ -51,7 +51,7 @@ extern "C" {
 	#define IL_NO_TPL
 	#define IL_NO_UTX
 	#define IL_NO_WAL
-#endif//IL_NO_GAMES
+//#endif//IL_NO_GAMES
 
 // If we want to compile without support for formats supported by external libraries,
 //  this define will remove them all.
@@ -67,6 +67,8 @@ extern "C" {
 	#undef IL_USE_DXTC_NVIDIA
 	#undef IL_USE_DXTC_SQUISH
 #endif//IL_NO_EXTLIBS
+
+#define IL_NO_WDP
 
 // Windows-specific
 #ifdef _WIN32
