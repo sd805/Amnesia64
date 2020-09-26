@@ -17,6 +17,8 @@
  * along with Amnesia: The Dark Descent.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#if 0
+
 #ifndef HPL_HAPTIC_SURFACE_HAPTX_STICKY_H
 #define HPL_HAPTIC_SURFACE_HAPTX_STICKY_H
 
@@ -42,3 +44,4 @@ namespace hpl {
 
 };
 #endif // HPL_HAPTIC_SURFACE_HAPTX_STICKY_H
+#endif

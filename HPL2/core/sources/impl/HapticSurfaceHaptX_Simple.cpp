@@ -17,6 +17,8 @@
  * along with Amnesia: The Dark Descent.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#if 0
+
 #include "impl/HapticSurfaceHaptX_Simple.h"
 
 #include "system/LowLevelSystem.h"
@@ -62,3 +64,4 @@ namespace hpl {
 	//-----------------------------------------------------------------------
 
 }
+#endif

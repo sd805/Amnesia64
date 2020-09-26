@@ -17,6 +17,8 @@
  * along with Amnesia: The Dark Descent.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#if 0
+
 #ifndef HPL_HAPTIC_FORCE_HAPTX_SAWWAVE_H
 #define HPL_HAPTIC_FORCE_HAPTX_SAWWAVE_H
 
@@ -41,3 +43,4 @@ namespace hpl {
 
 };
 #endif // HPL_HAPTIC_FORCE_SAWWAVE_H
+#endif
