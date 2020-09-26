@@ -39,16 +39,10 @@
     <ClCompile Include="dequant.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="encapiwrapper.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="encfrag.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="encinfo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="encode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="encoder_disabled.c">
