@@ -24,459 +24,459 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Newton.h">
+    <ClInclude Include="..\..\include\Newton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dg.h">
+    <ClInclude Include="core\dg.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgAABBPolygonSoup.h">
+    <ClInclude Include="core\dgAABBPolygonSoup.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgArray.h">
+    <ClInclude Include="core\dgArray.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgConvexHull3d.h">
+    <ClInclude Include="core\dgConvexHull3d.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgConvexHull4d.h">
+    <ClInclude Include="core\dgConvexHull4d.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgCRC.h">
+    <ClInclude Include="core\dgCRC.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgDebug.h">
+    <ClInclude Include="core\dgDebug.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgDelaunayTetrahedralization.h">
+    <ClInclude Include="core\dgDelaunayTetrahedralization.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgGeneralMatrix.h">
+    <ClInclude Include="core\dgGeneralMatrix.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgGeneralVector.h">
+    <ClInclude Include="core\dgGeneralVector.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgGoogol.h">
+    <ClInclude Include="core\dgGoogol.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgGraph.h">
+    <ClInclude Include="core\dgGraph.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgHeap.h">
+    <ClInclude Include="core\dgHeap.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgIntersections.h">
+    <ClInclude Include="core\dgIntersections.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgList.h">
+    <ClInclude Include="core\dgList.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgMatrix.h">
+    <ClInclude Include="core\dgMatrix.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgMemory.h">
+    <ClInclude Include="core\dgMemory.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgNode.h">
+    <ClInclude Include="core\dgNode.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgPathFinder.h">
+    <ClInclude Include="core\dgPathFinder.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgPlane.h">
+    <ClInclude Include="core\dgPlane.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgPolygonSoupBuilder.h">
+    <ClInclude Include="core\dgPolygonSoupBuilder.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgPolygonSoupDatabase.h">
+    <ClInclude Include="core\dgPolygonSoupDatabase.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgPolyhedra.h">
+    <ClInclude Include="core\dgPolyhedra.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgPolyhedraMassProperties.h">
+    <ClInclude Include="core\dgPolyhedraMassProperties.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgQuaternion.h">
+    <ClInclude Include="core\dgQuaternion.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgRandom.h">
+    <ClInclude Include="core\dgRandom.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgRef.h">
+    <ClInclude Include="core\dgRef.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgRefCounter.h">
+    <ClInclude Include="core\dgRefCounter.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgRtti.h">
+    <ClInclude Include="core\dgRtti.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgSimd_Instrutions.h">
+    <ClInclude Include="core\dgSimd_Instrutions.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgSmallDeterminant.h">
+    <ClInclude Include="core\dgSmallDeterminant.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgSPDMatrix.h">
+    <ClInclude Include="core\dgSPDMatrix.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgSphere.h">
+    <ClInclude Include="core\dgSphere.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgStack.h">
+    <ClInclude Include="core\dgStack.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgStdafx.h">
+    <ClInclude Include="core\dgStdafx.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgThreads.h">
+    <ClInclude Include="core\dgThreads.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgTree.h">
+    <ClInclude Include="core\dgTree.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgTypes.h">
+    <ClInclude Include="core\dgTypes.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\core\dgVector.h">
+    <ClInclude Include="core\dgVector.h">
       <Filter>Source Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgBallConstraint.h">
+    <ClInclude Include="physics\dgBallConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgBilateralConstraint.h">
+    <ClInclude Include="physics\dgBilateralConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgBody.h">
+    <ClInclude Include="physics\dgBody.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgBodyMasterList.h">
+    <ClInclude Include="physics\dgBodyMasterList.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgBroadPhaseCollision.h">
+    <ClInclude Include="physics\dgBroadPhaseCollision.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollision.h">
+    <ClInclude Include="physics\dgCollision.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionBox.h">
+    <ClInclude Include="physics\dgCollisionBox.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionBVH.h">
+    <ClInclude Include="physics\dgCollisionBVH.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionCapsule.h">
+    <ClInclude Include="physics\dgCollisionCapsule.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionChamferCylinder.h">
+    <ClInclude Include="physics\dgCollisionChamferCylinder.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionCompound.h">
+    <ClInclude Include="physics\dgCollisionCompound.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionCompoundBreakable.h">
+    <ClInclude Include="physics\dgCollisionCompoundBreakable.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionCone.h">
+    <ClInclude Include="physics\dgCollisionCone.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionConvex.h">
+    <ClInclude Include="physics\dgCollisionConvex.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionConvexHull.h">
+    <ClInclude Include="physics\dgCollisionConvexHull.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionConvexModifier.h">
+    <ClInclude Include="physics\dgCollisionConvexModifier.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionCylinder.h">
+    <ClInclude Include="physics\dgCollisionCylinder.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionEllipse.h">
+    <ClInclude Include="physics\dgCollisionEllipse.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionHeightField.h">
+    <ClInclude Include="physics\dgCollisionHeightField.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionMesh.h">
+    <ClInclude Include="physics\dgCollisionMesh.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionNull.h">
+    <ClInclude Include="physics\dgCollisionNull.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionScene.h">
+    <ClInclude Include="physics\dgCollisionScene.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionSphere.h">
+    <ClInclude Include="physics\dgCollisionSphere.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCollisionUserMesh.h">
+    <ClInclude Include="physics\dgCollisionUserMesh.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgConnectorConstraint.h">
+    <ClInclude Include="physics\dgConnectorConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgConstraint.h">
+    <ClInclude Include="physics\dgConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgContact.h">
+    <ClInclude Include="physics\dgContact.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgCorkscrewConstraint.h">
+    <ClInclude Include="physics\dgCorkscrewConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgHingeConstraint.h">
+    <ClInclude Include="physics\dgHingeConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgMeshEffect.h">
+    <ClInclude Include="physics\dgMeshEffect.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgMinkowskiConv.h">
+    <ClInclude Include="physics\dgMinkowskiConv.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgPhysics.h">
+    <ClInclude Include="physics\dgPhysics.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgPhysicsStdafx.h">
+    <ClInclude Include="physics\dgPhysicsStdafx.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgPointToCurveConstraint.h">
+    <ClInclude Include="physics\dgPointToCurveConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgSlidingConstraint.h">
+    <ClInclude Include="physics\dgSlidingConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgUniversalConstraint.h">
+    <ClInclude Include="physics\dgUniversalConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgUpVectorConstraint.h">
+    <ClInclude Include="physics\dgUpVectorConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgUserConstraint.h">
+    <ClInclude Include="physics\dgUserConstraint.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgWorld.h">
+    <ClInclude Include="physics\dgWorld.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\physics\dgWorldDynamicUpdate.h">
+    <ClInclude Include="physics\dgWorldDynamicUpdate.h">
       <Filter>Source Files\physics</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\newton\NewtonClass.h">
+    <ClInclude Include="newton\NewtonClass.h">
       <Filter>Source Files\newton</Filter>
     </ClInclude>
-    <ClInclude Include="sources\Newton\newton\NewtonStdAfx.h">
+    <ClInclude Include="newton\NewtonStdAfx.h">
       <Filter>Source Files\newton</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\Newton\core\dg.cpp">
+    <ClCompile Include="core\dg.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgAABBPolygonSoup.cpp">
+    <ClCompile Include="core\dgAABBPolygonSoup.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgConvexHull3d.cpp">
+    <ClCompile Include="core\dgConvexHull3d.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgConvexHull4d.cpp">
+    <ClCompile Include="core\dgConvexHull4d.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgCRC.cpp">
+    <ClCompile Include="core\dgCRC.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgDebug.cpp">
+    <ClCompile Include="core\dgDebug.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgDelaunayTetrahedralization.cpp">
+    <ClCompile Include="core\dgDelaunayTetrahedralization.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgGeneralMatrix.cpp">
+    <ClCompile Include="core\dgGeneralMatrix.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgGeneralVector.cpp">
+    <ClCompile Include="core\dgGeneralVector.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgGoogol.cpp">
+    <ClCompile Include="core\dgGoogol.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgIntersections.cpp">
+    <ClCompile Include="core\dgIntersections.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgMatrix.cpp">
+    <ClCompile Include="core\dgMatrix.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgMemory.cpp">
+    <ClCompile Include="core\dgMemory.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgNode.cpp">
+    <ClCompile Include="core\dgNode.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgPolygonSoupBuilder.cpp">
+    <ClCompile Include="core\dgPolygonSoupBuilder.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgPolyhedra.cpp">
+    <ClCompile Include="core\dgPolyhedra.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgPolyhedraMassProperties.cpp">
+    <ClCompile Include="core\dgPolyhedraMassProperties.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgQuaternion.cpp">
+    <ClCompile Include="core\dgQuaternion.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgRandom.cpp">
+    <ClCompile Include="core\dgRandom.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgRef.cpp">
+    <ClCompile Include="core\dgRef.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgRefCounter.cpp">
+    <ClCompile Include="core\dgRefCounter.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgSmallDeterminant.cpp">
+    <ClCompile Include="core\dgSmallDeterminant.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgSPDMatrix.cpp">
+    <ClCompile Include="core\dgSPDMatrix.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgSphere.cpp">
+    <ClCompile Include="core\dgSphere.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgThreads.cpp">
+    <ClCompile Include="core\dgThreads.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgTree.cpp">
+    <ClCompile Include="core\dgTree.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\core\dgTypes.cpp">
+    <ClCompile Include="core\dgTypes.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgBallConstraint.cpp">
+    <ClCompile Include="physics\dgBallConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgBilateralConstraint.cpp">
+    <ClCompile Include="physics\dgBilateralConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgBody.cpp">
+    <ClCompile Include="physics\dgBody.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgBodyMasterList.cpp">
+    <ClCompile Include="physics\dgBodyMasterList.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgBroadPhaseCollision.cpp">
+    <ClCompile Include="physics\dgBroadPhaseCollision.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollision.cpp">
+    <ClCompile Include="physics\dgCollision.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionBox.cpp">
+    <ClCompile Include="physics\dgCollisionBox.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionBVH.cpp">
+    <ClCompile Include="physics\dgCollisionBVH.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionCapsule.cpp">
+    <ClCompile Include="physics\dgCollisionCapsule.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionChamferCylinder.cpp">
+    <ClCompile Include="physics\dgCollisionChamferCylinder.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionCompound.cpp">
+    <ClCompile Include="physics\dgCollisionCompound.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionCompoundBreakable.cpp">
+    <ClCompile Include="physics\dgCollisionCompoundBreakable.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionCone.cpp">
+    <ClCompile Include="physics\dgCollisionCone.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionConvex.cpp">
+    <ClCompile Include="physics\dgCollisionConvex.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionConvexHull.cpp">
+    <ClCompile Include="physics\dgCollisionConvexHull.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionConvexModifier.cpp">
+    <ClCompile Include="physics\dgCollisionConvexModifier.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionCylinder.cpp">
+    <ClCompile Include="physics\dgCollisionCylinder.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionEllipse.cpp">
+    <ClCompile Include="physics\dgCollisionEllipse.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionHeightField.cpp">
+    <ClCompile Include="physics\dgCollisionHeightField.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionMesh.cpp">
+    <ClCompile Include="physics\dgCollisionMesh.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionNull.cpp">
+    <ClCompile Include="physics\dgCollisionNull.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionScene.cpp">
+    <ClCompile Include="physics\dgCollisionScene.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionSphere.cpp">
+    <ClCompile Include="physics\dgCollisionSphere.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCollisionUserMesh.cpp">
+    <ClCompile Include="physics\dgCollisionUserMesh.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgConnectorConstraint.cpp">
+    <ClCompile Include="physics\dgConnectorConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgConstraint.cpp">
+    <ClCompile Include="physics\dgConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgContact.cpp">
+    <ClCompile Include="physics\dgContact.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgCorkscrewConstraint.cpp">
+    <ClCompile Include="physics\dgCorkscrewConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgHingeConstraint.cpp">
+    <ClCompile Include="physics\dgHingeConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgMeshEffect.cpp">
+    <ClCompile Include="physics\dgMeshEffect.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgMeshEffect2.cpp">
+    <ClCompile Include="physics\dgMeshEffect2.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgMinkowskiConv.cpp">
+    <ClCompile Include="physics\dgMinkowskiConv.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgNarrowPhaseCollision.cpp">
+    <ClCompile Include="physics\dgNarrowPhaseCollision.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgPointToCurveConstraint.cpp">
+    <ClCompile Include="physics\dgPointToCurveConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgSlidingConstraint.cpp">
+    <ClCompile Include="physics\dgSlidingConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgUniversalConstraint.cpp">
+    <ClCompile Include="physics\dgUniversalConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgUpVectorConstraint.cpp">
+    <ClCompile Include="physics\dgUpVectorConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgUserConstraint.cpp">
+    <ClCompile Include="physics\dgUserConstraint.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgWorld.cpp">
+    <ClCompile Include="physics\dgWorld.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\physics\dgWorldDynamicUpdate.cpp">
+    <ClCompile Include="physics\dgWorldDynamicUpdate.cpp">
       <Filter>Source Files\physics</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\newton\Newton.cpp">
+    <ClCompile Include="newton\Newton.cpp">
       <Filter>Source Files\newton</Filter>
     </ClCompile>
-    <ClCompile Include="sources\Newton\newton\NewtonClass.cpp">
+    <ClCompile Include="newton\NewtonClass.cpp">
       <Filter>Source Files\newton</Filter>
     </ClCompile>
   </ItemGroup>
