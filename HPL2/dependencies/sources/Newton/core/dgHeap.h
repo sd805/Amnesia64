@@ -241,7 +241,8 @@ void dgDownHeap<OBJECT,KEY>::Push (OBJECT &obj, KEY key)
 {
 	dgInt32 i;
 	dgInt32 j;
-	_ASSERTE (m_curCount < m_maxCount);
+	bool assertCondition = dgHeapBase<OBJECT, KEY>::m_curCount < dgHeapBase<OBJECT, KEY>::m_maxCount;
+	_ASSERTE (assertCondition);
 	dgHeapBase<OBJECT,KEY>::m_curCount ++;
 
 	for (i = dgHeapBase<OBJECT,KEY>::m_curCount; i; i = j) {
@@ -412,7 +413,8 @@ void dgUpHeap<OBJECT,KEY>::Push (OBJECT &obj, KEY key)
 {
 	dgInt32 i;
 	dgInt32 j;
-	_ASSERTE (m_curCount < m_maxCount);
+	bool assertCondition = dgHeapBase<OBJECT, KEY>::m_curCount < dgHeapBase<OBJECT, KEY>::m_maxCount;
+	_ASSERTE (assertCondition);
 	dgHeapBase<OBJECT,KEY>::m_curCount ++;
 
 	for (i = dgHeapBase<OBJECT,KEY>::m_curCount; i; i = j) {
