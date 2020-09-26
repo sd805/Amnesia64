@@ -149,6 +149,14 @@
     <ClInclude Include="include\il_vtf.h" />
     <ClInclude Include="include\il_wdp.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\jpeg\jpeg.vcxproj">
+      <Project>{8c09b653-1480-454a-9a8f-16b4df4b69af}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\png\png.vcxproj">
+      <Project>{c8c303fc-2b02-4f9e-932b-339c68d03590}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

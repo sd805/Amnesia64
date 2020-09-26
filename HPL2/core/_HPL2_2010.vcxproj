@@ -52,10 +52,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
-    <Lib>
-      <AdditionalDependencies>SDL2.lib;DevIL.lib;glew32.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\dependencies\lib\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
+    <Lib />
     <PreBuildEvent />
     <PreLinkEvent />
   </ItemDefinitionGroup>
@@ -70,10 +67,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
-    <Lib>
-      <AdditionalDependencies>SDL2.lib;DevIL.lib;glew32.lib;zlibwapi.lib;XInput.lib;User32.lib;Gdi32.lib;Shell32.lib;fbxsdk-2012.2-md.lib;Wininet.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\dependencies\lib\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
+    <Lib />
     <PreLinkEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -700,6 +694,35 @@
     <ClCompile Include="sources\generate\Generate.cpp" />
     <ClCompile Include="sources\generate\GenerateTypes.cpp" />
     <ClCompile Include="sources\generate\VoxelMap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dependencies\sources\AngelScript\AngelScript.vcxproj">
+      <Project>{f52f5209-0e1b-445e-a9b5-edeeb444215d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\DevIL\DevIL.vcxproj">
+      <Project>{a33d83b6-5377-4386-a670-9096db288370}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\GLEW\GLEW.vcxproj">
+      <Project>{69d24cff-31f6-4530-ac45-fb324aab5713}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\Newton\Newton.vcxproj">
+      <Project>{bfb0e28b-c289-4982-a6f0-c19cb3a57141}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\ogg\ogg.vcxproj">
+      <Project>{78f1fc55-39f8-4528-9acf-e6196cfcae3e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\SDL2\SDL2.vcxproj">
+      <Project>{a748aef9-9068-401d-ab2b-196fdf92f5cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\theora\theora.vcxproj">
+      <Project>{f137b949-540b-4c39-91cf-b7a1e72e3059}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\vorbis\vorbis.vcxproj">
+      <Project>{6c112f3e-cd0b-4a8a-b103-bdd42dfec27d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\zlib\zlib.vcxproj">
+      <Project>{1828f2be-9da8-43b7-a2f9-a2e21c211419}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
