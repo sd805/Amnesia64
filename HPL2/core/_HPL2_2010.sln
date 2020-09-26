@@ -6,6 +6,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_HPL2_2010", "_HPL2_2010.vc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL2", "..\dependencies\SDL2.vcxproj", "{A748AEF9-9068-401D-AB2B-196FDF92F5CC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Newton", "..\dependencies\Newton.vcxproj", "{BFB0E28B-C289-4982-A6F0-C19CB3A57141}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -28,6 +30,14 @@ Global
 		{A748AEF9-9068-401D-AB2B-196FDF92F5CC}.Release|Win32.Build.0 = Release|Win32
 		{A748AEF9-9068-401D-AB2B-196FDF92F5CC}.Release|x64.ActiveCfg = Release|x64
 		{A748AEF9-9068-401D-AB2B-196FDF92F5CC}.Release|x64.Build.0 = Release|x64
+		{BFB0E28B-C289-4982-A6F0-C19CB3A57141}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BFB0E28B-C289-4982-A6F0-C19CB3A57141}.Debug|Win32.Build.0 = Debug|Win32
+		{BFB0E28B-C289-4982-A6F0-C19CB3A57141}.Debug|x64.ActiveCfg = Debug|x64
+		{BFB0E28B-C289-4982-A6F0-C19CB3A57141}.Debug|x64.Build.0 = Debug|x64
+		{BFB0E28B-C289-4982-A6F0-C19CB3A57141}.Release|Win32.ActiveCfg = Release|Win32
+		{BFB0E28B-C289-4982-A6F0-C19CB3A57141}.Release|Win32.Build.0 = Release|Win32
+		{BFB0E28B-C289-4982-A6F0-C19CB3A57141}.Release|x64.ActiveCfg = Release|x64
+		{BFB0E28B-C289-4982-A6F0-C19CB3A57141}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
