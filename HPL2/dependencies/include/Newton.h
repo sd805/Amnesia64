@@ -580,7 +580,7 @@ extern "C" {
 
 
 	NEWTON_API NewtonCollision* NewtonCreateSceneCollision (const NewtonWorld* const newtonWorld, int shapeID);
-	NEWTON_API NewtonSceneProxy* NewtonSceneCollisionCreateProxy (NewtonCollision* const scene, NewtonCollision* collision, const dFloat* const matrix);
+	NEWTON_API NewtonSceneProxy* NewtonSceneCollisionCreateProxy (NewtonCollision* const scene, NewtonCollision* collision/*, const dFloat* const matrix*/);
 
 
 
@@ -669,7 +669,7 @@ extern "C" {
 	// body manipulation functions
 	//
 	// **********************************************************************************************
-	NEWTON_API NewtonBody* NewtonCreateBody (const NewtonWorld* newtonWorld, const NewtonCollision* collision, const dFloat* matrix);
+	NEWTON_API NewtonBody* NewtonCreateBody (const NewtonWorld* newtonWorld, const NewtonCollision* collision/*, const dFloat* matrix*/);
 	NEWTON_API void  NewtonDestroyBody(const NewtonWorld* newtonWorld, const NewtonBody* body);
 
 	NEWTON_API void  NewtonBodyAddForce (const NewtonBody* body, const dFloat* force);

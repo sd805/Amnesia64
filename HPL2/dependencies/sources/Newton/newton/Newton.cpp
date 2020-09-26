@@ -3906,17 +3906,17 @@ NewtonCollision* NewtonCreateSceneCollision (const NewtonWorld* const newtonWorl
 }
 
 
-NewtonSceneProxy* NewtonSceneCollisionCreateProxy (NewtonCollision* const scene, NewtonCollision* const collision, const dFloat* const matrixPtr)
+NewtonSceneProxy* NewtonSceneCollisionCreateProxy (NewtonCollision* const scene, NewtonCollision* const collision/*, const dFloat* const matrixPtr*/)
 {
-	dgMatrix matrix (*((dgMatrix*) matrixPtr));
+	/*dgMatrix matrix (*((dgMatrix*) matrixPtr));
 	matrix.m_front.m_w = dgFloat32 (0.0f);
 	matrix.m_up.m_w    = dgFloat32 (0.0f);
 	matrix.m_right.m_w = dgFloat32 (0.0f);
-	matrix.m_posit.m_w = dgFloat32 (1.0f);
+	matrix.m_posit.m_w = dgFloat32 (1.0f);*/
 
 	dgCollisionScene* const newtonScene = (dgCollisionScene*) scene;
 	_ASSERTE (newtonScene->IsType(dgCollision::dgCollisionScene_RTTI));
-	return (NewtonSceneProxy*) newtonScene->AddProxy ((dgCollision*) collision, matrix);
+	return (NewtonSceneProxy*) newtonScene->AddProxy ((dgCollision*) collision/*, matrix*/);
 }
 
 
@@ -4636,7 +4636,7 @@ dFloat NewtonCalculateSpringDamperAcceleration(dFloat dt, dFloat ks, dFloat x, d
 // All event functions are set to NULL and the material gruopID of the body is set to the default GroupID.
 //
 // See also: NewtonDestroyBody
-NewtonBody* NewtonCreateBody(const NewtonWorld* const newtonWorld, const NewtonCollision* const collisionPtr, const dFloat* const matrixPtr)
+NewtonBody* NewtonCreateBody(const NewtonWorld* const newtonWorld, const NewtonCollision* const collisionPtr/*, const dFloat* const matrixPtr*/)
 {
 
 	TRACE_FUNTION(__FUNCTION__);
@@ -4647,6 +4647,7 @@ NewtonBody* NewtonCreateBody(const NewtonWorld* const newtonWorld, const NewtonC
 	SaveCollision (collisionPtr);
 #endif
 
+	/*
 	dgMatrix matrix (*((dgMatrix*) matrixPtr));
 #ifdef _DEBUG
 	//	matrix.m_front = matrix.m_front.Scale (dgRsqrt (matrix.m_front % matrix.m_front));
@@ -4659,8 +4660,9 @@ NewtonBody* NewtonCreateBody(const NewtonWorld* const newtonWorld, const NewtonC
 	matrix.m_up.m_w    = dgFloat32 (0.0f);
 	matrix.m_right.m_w = dgFloat32 (0.0f);
 	matrix.m_posit.m_w = dgFloat32 (1.0f);
+	*/
 
-	return (NewtonBody*) world->CreateBody (collision, matrix);
+	return (NewtonBody*) world->CreateBody (collision/*, matrix*/);
 }
 
 // Name: NewtonDestroyBody 

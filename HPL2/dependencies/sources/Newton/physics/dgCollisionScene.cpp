@@ -79,7 +79,7 @@ dgCollisionScene::dgNode::~dgNode ()
 	}
 }
 
-dgCollisionScene::dgProxy::dgProxy (dgCollision* m_shape, const dgMatrix& matrix, dgCollisionScene* const owner)
+dgCollisionScene::dgProxy::dgProxy (dgCollision* m_shape, /*const dgMatrix& matrix,*/ dgCollisionScene* const owner)
 	:dgNode ()
 	,m_shape (m_shape)
 	,m_owner (owner)
@@ -87,7 +87,7 @@ dgCollisionScene::dgProxy::dgProxy (dgCollision* m_shape, const dgMatrix& matrix
 	dgVector boxP0;
 	dgVector boxP1;
 
-	m_matrix = m_shape->GetOffsetMatrix() * matrix;
+	m_matrix = m_shape->GetOffsetMatrix()/* * matrix*/;
 	m_shape->CalcAABB (m_matrix, boxP0, boxP1);
 
 	dgVector p0 (boxP0.CompProduct(dgVector (DG_SCENE_AABB_SCALE, DG_SCENE_AABB_SCALE, DG_SCENE_AABB_SCALE, dgFloat32 (0.0f))));
@@ -1023,10 +1023,10 @@ void* dgCollisionScene::GetNextProxy (void* const proxy) const
 }
 
 
-void* dgCollisionScene::AddProxy (dgCollision* const shape, const dgMatrix& matrix)
+void* dgCollisionScene::AddProxy (dgCollision* const shape/*, const dgMatrix& matrix*/)
 {
 	shape->AddRef();
-	dgProxy* const newNode = new (m_world->GetAllocator()) dgProxy (shape, matrix, this);
+	dgProxy* const newNode = new (m_world->GetAllocator()) dgProxy (shape, /*matrix,*/ this);
 	newNode->m_myNode = m_list.Append(newNode);
 
 	if (!m_rootNode) {

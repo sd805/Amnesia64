@@ -57,7 +57,7 @@ class dgCollisionScene: public dgCollision
 		public:
 		DG_CLASS_ALLOCATOR(allocator)
 
-		dgProxy (dgCollision* m_shape, const dgMatrix& matrix, dgCollisionScene* const owner);
+		dgProxy (dgCollision* m_shape, /*const dgMatrix& matrix,*/ dgCollisionScene* const owner);
 		~dgProxy();
 
 		dgMatrix m_matrix;
@@ -73,7 +73,7 @@ class dgCollisionScene: public dgCollision
 
 	void* GetFirstProxy () const;
 	void* GetNextProxy (void* const proxy) const;
-	void* AddProxy (dgCollision* const shape, const dgMatrix& matrix);
+	void* AddProxy (dgCollision* const shape/*, const dgMatrix& matrix*/);
 	void RemoveProxy (void* const proxy);
 	void ImproveTotalFitness();
 

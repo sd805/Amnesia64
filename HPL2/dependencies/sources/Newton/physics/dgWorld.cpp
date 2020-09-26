@@ -341,7 +341,7 @@ void dgWorld::AddSentinelBody()
 	dgCollision* collision;
 
 	collision = new  (m_allocator) dgCollisionNull (m_allocator, 0x4352fe67);
-	m_sentionelBody = CreateBody(collision, dgGetIdentityMatrix());
+	m_sentionelBody = CreateBody(collision/*, dgGetIdentityMatrix()*/);
 	ReleaseCollision(collision);
 
 //	dgBodyMasterList::m_sentinel = m_sentionelBody;
@@ -465,7 +465,7 @@ void dgWorld::DestroyAllBodies ()
 	_ASSERTE (dgBodyCollisionList::GetCount() == 0);
 }
 
-dgBody* dgWorld::CreateBody(dgCollision* const collision, const dgMatrix& matrix)
+dgBody* dgWorld::CreateBody(dgCollision* const collision/*, const dgMatrix& matrix*/)
 {
 	dgBody* body;
 
@@ -516,8 +516,8 @@ dgBody* dgWorld::CreateBody(dgCollision* const collision, const dgMatrix& matrix
 	body->SetMassMatrix (DG_INFINITE_MASS * dgFloat32 (2.0f), DG_INFINITE_MASS, DG_INFINITE_MASS, DG_INFINITE_MASS);
 	dgBroadPhaseCollision::Add (body);
 
-	//body->SetMatrix (dgGetIdentityMatrix());
-	body->SetMatrix (matrix);
+	body->SetMatrix (dgGetIdentityMatrix());
+	//body->SetMatrix (matrix);
 	body->m_invWorldInertiaMatrix[3][3] = dgFloat32 (1.0f);
 	return body;
 }
