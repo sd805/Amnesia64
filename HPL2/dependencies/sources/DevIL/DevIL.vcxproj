@@ -37,7 +37,6 @@
     <ClCompile Include="src\il_dpx.cpp" />
     <ClCompile Include="src\il_endian.cpp" />
     <ClCompile Include="src\il_error.cpp" />
-    <ClCompile Include="src\il_exr.c" />
     <ClCompile Include="src\il_exr.cpp" />
     <ClCompile Include="src\il_fastconv.cpp" />
     <ClCompile Include="src\il_files.cpp" />
@@ -92,7 +91,6 @@
     <ClCompile Include="src\il_tiff.cpp" />
     <ClCompile Include="src\il_tpl.cpp" />
     <ClCompile Include="src\il_utility.cpp" />
-    <ClCompile Include="src\il_utx.c" />
     <ClCompile Include="src\il_utx.cpp" />
     <ClCompile Include="src\il_vtf.cpp" />
     <ClCompile Include="src\il_wal.cpp" />
