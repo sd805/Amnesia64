@@ -12,6 +12,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\dependencies\sou
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AngelScript", "..\dependencies\sources\AngelScript\AngelScript.vcxproj", "{F52F5209-0E1B-445E-A9B5-EDEEB444215D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLEW", "..\dependencies\sources\GLEW\GLEW.vcxproj", "{69D24CFF-31F6-4530-AC45-FB324AAB5713}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -58,6 +60,14 @@ Global
 		{F52F5209-0E1B-445E-A9B5-EDEEB444215D}.Release|Win32.Build.0 = Release|Win32
 		{F52F5209-0E1B-445E-A9B5-EDEEB444215D}.Release|x64.ActiveCfg = Release|x64
 		{F52F5209-0E1B-445E-A9B5-EDEEB444215D}.Release|x64.Build.0 = Release|x64
+		{69D24CFF-31F6-4530-AC45-FB324AAB5713}.Debug|Win32.ActiveCfg = Debug|Win32
+		{69D24CFF-31F6-4530-AC45-FB324AAB5713}.Debug|Win32.Build.0 = Debug|Win32
+		{69D24CFF-31F6-4530-AC45-FB324AAB5713}.Debug|x64.ActiveCfg = Debug|x64
+		{69D24CFF-31F6-4530-AC45-FB324AAB5713}.Debug|x64.Build.0 = Debug|x64
+		{69D24CFF-31F6-4530-AC45-FB324AAB5713}.Release|Win32.ActiveCfg = Release|Win32
+		{69D24CFF-31F6-4530-AC45-FB324AAB5713}.Release|Win32.Build.0 = Release|Win32
+		{69D24CFF-31F6-4530-AC45-FB324AAB5713}.Release|x64.ActiveCfg = Release|x64
+		{69D24CFF-31F6-4530-AC45-FB324AAB5713}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
