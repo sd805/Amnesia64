@@ -1535,7 +1535,7 @@ void iLuxEnemy::UpdateCheckStuckAtDoor(float afTimeStep)
 	mlStuckDoorID = -1;
 
 	cBoundingVolume *pBV = mpCharBody->GetCurrentBody()->GetBoundingVolume();
-	iLuxProp *pSwingDoor;
+	iLuxProp *pSwingDoor = NULL;
 
 	
 	////////////////////////////////
