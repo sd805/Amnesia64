@@ -60,6 +60,7 @@
     <ClCompile Include="jidctflt.c" />
     <ClCompile Include="jidctfst.c" />
     <ClCompile Include="jidctint.c" />
+    <ClCompile Include="jmemmgr.c" />
     <ClCompile Include="jmemnobs.c" />
     <ClCompile Include="jquant1.c" />
     <ClCompile Include="jquant2.c" />

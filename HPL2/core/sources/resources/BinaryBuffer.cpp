@@ -33,9 +33,6 @@
 #include <SDL/SDL_endian.h>
 #endif
 
-#ifdef WIN32
-	#define ZLIB_WINAPI
-#endif
 #include <zlib.h>
 
 // @todo Evil quick and dirty check to Prevent me from building 64-bit until I fix this code
