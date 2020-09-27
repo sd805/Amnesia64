@@ -50,6 +50,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>26495;26812</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <IgnoreEmbeddedIDL>false</IgnoreEmbeddedIDL>
@@ -71,6 +72,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>26495;26812</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <IgnoreEmbeddedIDL>false</IgnoreEmbeddedIDL>
