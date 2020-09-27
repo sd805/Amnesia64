@@ -312,8 +312,8 @@
     <ResourceCompile Include="Lux.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\HPL2\core\HPL2_2010.vcxproj">
-      <Project>{0780dec5-a930-4721-9364-17a49d2a4e60}</Project>
+    <ProjectReference Include="..\..\..\HPL2\core\HPL2.vcxproj">
+      <Project>{4ab08447-393f-40d0-a48d-aa6ca41d50cc}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
