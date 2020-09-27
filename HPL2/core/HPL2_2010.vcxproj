@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0780DEC5-A930-4721-9364-17A49D2A4E60}</ProjectGuid>
-    <RootNamespace>_HPL2_2010</RootNamespace>
+    <RootNamespace>HPL2_2010</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
