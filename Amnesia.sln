@@ -28,6 +28,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vorbis", "HPL2\dependencies
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "HPL2\dependencies\sources\zlib\zlib.vcxproj", "{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freealut", "HPL2\dependencies\sources\freealut\freealut.vcxproj", "{34D09609-96AA-4D99-A3A7-A404B7CA24F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -136,6 +138,14 @@ Global
 		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Release|x64.Build.0 = Release|x64
 		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Release|x86.ActiveCfg = Release|Win32
 		{1828F2BE-9DA8-43B7-A2F9-A2E21C211419}.Release|x86.Build.0 = Release|Win32
+		{34D09609-96AA-4D99-A3A7-A404B7CA24F8}.Debug|x64.ActiveCfg = Debug|x64
+		{34D09609-96AA-4D99-A3A7-A404B7CA24F8}.Debug|x64.Build.0 = Debug|x64
+		{34D09609-96AA-4D99-A3A7-A404B7CA24F8}.Debug|x86.ActiveCfg = Debug|Win32
+		{34D09609-96AA-4D99-A3A7-A404B7CA24F8}.Debug|x86.Build.0 = Debug|Win32
+		{34D09609-96AA-4D99-A3A7-A404B7CA24F8}.Release|x64.ActiveCfg = Release|x64
+		{34D09609-96AA-4D99-A3A7-A404B7CA24F8}.Release|x64.Build.0 = Release|x64
+		{34D09609-96AA-4D99-A3A7-A404B7CA24F8}.Release|x86.ActiveCfg = Release|Win32
+		{34D09609-96AA-4D99-A3A7-A404B7CA24F8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
