@@ -704,6 +704,9 @@
     <ProjectReference Include="..\dependencies\sources\DevIL\DevIL.vcxproj">
       <Project>{a33d83b6-5377-4386-a670-9096db288370}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\dependencies\sources\freealut\freealut.vcxproj">
+      <Project>{34d09609-96aa-4d99-a3a7-a404b7ca24f8}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\dependencies\sources\GLEW\GLEW.vcxproj">
       <Project>{69d24cff-31f6-4530-ac45-fb324aab5713}</Project>
     </ProjectReference>

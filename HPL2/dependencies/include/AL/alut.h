@@ -16,6 +16,7 @@
 extern "C" {
 #endif
 
+#if 0
 #if defined(_WIN32) && !defined(_XBOX)
  #if defined (ALUT_BUILD_LIBRARY)
   #define ALUT_API __declspec(dllexport)
@@ -28,6 +29,9 @@ extern "C" {
  #else
   #define ALUT_API extern
  #endif
+#endif
+#else
+#define ALUT_API // building as a static library
 #endif
 
 #if defined(_WIN32)
