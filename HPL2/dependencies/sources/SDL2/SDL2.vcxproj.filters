@@ -67,6 +67,51 @@
     <Filter Include="Source Files\video\windows">
       <UniqueIdentifier>{dd00e47e-8431-46ec-94f4-29d3cfc5da2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\loadso">
+      <UniqueIdentifier>{1fc4d4cd-4bc9-44ad-8079-da7a6bf12063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sensor">
+      <UniqueIdentifier>{7f4960e5-12de-4f37-a3e0-3f3dba86b715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sensor\dummy">
+      <UniqueIdentifier>{e809bd4b-d244-46a2-a4da-3a1fdd40f95b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread\generic">
+      <UniqueIdentifier>{815f521a-6002-4dc8-bbfb-3ac904508534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\joystick\hidapi">
+      <UniqueIdentifier>{01317cc5-29f6-479f-bd02-36cabb2e246d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="audio">
+      <UniqueIdentifier>{a0926cc8-23f1-434f-9f76-fe6af28afb30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="audio\directsound">
+      <UniqueIdentifier>{b3e9721e-e3e4-4d73-b6be-f2155f7bbe67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="audio\disk">
+      <UniqueIdentifier>{2253fa9c-2d46-4446-a1c2-92bdae2086c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="audio\dummy">
+      <UniqueIdentifier>{d3e280ab-aea1-43f1-a601-ec47781ffc89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="audio\wasapi">
+      <UniqueIdentifier>{9ad5e065-6e63-4e5d-a04e-14fe1e063452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="audio\winmm">
+      <UniqueIdentifier>{0cabbcda-1a5a-48a3-a150-72da4368a84a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hidapi">
+      <UniqueIdentifier>{bad6ef7f-568f-48d4-8a76-c69b78b9df6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render\direct3d">
+      <UniqueIdentifier>{fa9626d0-1b58-42c7-8a48-b2cd7f58d99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render\opengles2">
+      <UniqueIdentifier>{1306774f-2045-46da-aa7f-721cc539b3c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\video\dummy">
+      <UniqueIdentifier>{cb17db20-8c2e-48f6-b41c-05e601e64a95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\SDL2\begin_code.h">
@@ -525,6 +570,69 @@
     <ClInclude Include="video\windows\wmmsg.h">
       <Filter>Source Files\video\windows</Filter>
     </ClInclude>
+    <ClInclude Include="sensor\SDL_sensor_c.h">
+      <Filter>Source Files\sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="sensor\SDL_syssensor.h">
+      <Filter>Source Files\sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="sensor\dummy\SDL_dummysensor.h">
+      <Filter>Source Files\sensor\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="joystick\hidapi\SDL_hidapi_rumble.h">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClInclude>
+    <ClInclude Include="joystick\hidapi\SDL_hidapijoystick_c.h">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\SDL_audio_c.h">
+      <Filter>audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\SDL_audiodev_c.h">
+      <Filter>audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\SDL_sysaudio.h">
+      <Filter>audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\SDL_wave.h">
+      <Filter>audio</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\directsound\SDL_directsound.h">
+      <Filter>audio\directsound</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\disk\SDL_diskaudio.h">
+      <Filter>audio\disk</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\dummy\SDL_dummyaudio.h">
+      <Filter>audio\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\winmm\SDL_winmm.h">
+      <Filter>audio\winmm</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\wasapi\SDL_wasapi.h">
+      <Filter>audio\wasapi</Filter>
+    </ClInclude>
+    <ClInclude Include="hidapi\hidapi\hidapi.h">
+      <Filter>Source Files\hidapi</Filter>
+    </ClInclude>
+    <ClInclude Include="render\direct3d\SDL_shaders_d3d.h">
+      <Filter>Source Files\render\direct3d</Filter>
+    </ClInclude>
+    <ClInclude Include="render\opengles2\SDL_gles2funcs.h">
+      <Filter>Source Files\render\opengles2</Filter>
+    </ClInclude>
+    <ClInclude Include="render\opengles2\SDL_shaders_gles2.h">
+      <Filter>Source Files\render\opengles2</Filter>
+    </ClInclude>
+    <ClInclude Include="video\dummy\SDL_nullevents_c.h">
+      <Filter>Source Files\video\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="video\dummy\SDL_nullframebuffer_c.h">
+      <Filter>Source Files\video\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="video\dummy\SDL_nullvideo.h">
+      <Filter>Source Files\video\dummy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SDL.c">
@@ -844,6 +952,111 @@
     </ClCompile>
     <ClCompile Include="video\windows\SDL_windowswindow.c">
       <Filter>Source Files\video\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="loadso\windows\SDL_sysloadso.c">
+      <Filter>Source Files\loadso</Filter>
+    </ClCompile>
+    <ClCompile Include="sensor\SDL_sensor.c">
+      <Filter>Source Files\sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="sensor\dummy\SDL_dummysensor.c">
+      <Filter>Source Files\sensor\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="file\SDL_rwops.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\generic\SDL_syscond.c">
+      <Filter>Source Files\thread\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapi_gamecube.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapi_ps4.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapi_rumble.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapi_steam.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapi_switch.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapi_xbox360.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapi_xbox360w.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapi_xboxone.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="joystick\hidapi\SDL_hidapijoystick.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\SDL_audio.c">
+      <Filter>audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\SDL_audiocvt.c">
+      <Filter>audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\SDL_audiodev.c">
+      <Filter>audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\SDL_audiotypecvt.c">
+      <Filter>audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\SDL_mixer.c">
+      <Filter>audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\SDL_wave.c">
+      <Filter>audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\directsound\SDL_directsound.c">
+      <Filter>audio\directsound</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\disk\SDL_diskaudio.c">
+      <Filter>audio\disk</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\dummy\SDL_dummyaudio.c">
+      <Filter>audio\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\winmm\SDL_winmm.c">
+      <Filter>audio\winmm</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\wasapi\SDL_wasapi.c">
+      <Filter>audio\wasapi</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\wasapi\SDL_wasapi_win32.c">
+      <Filter>audio\wasapi</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\wasapi\SDL_wasapi_winrt.cpp">
+      <Filter>audio\wasapi</Filter>
+    </ClCompile>
+    <ClCompile Include="hidapi\windows\hid.c">
+      <Filter>Source Files\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="render\direct3d\SDL_render_d3d.c">
+      <Filter>Source Files\render\direct3d</Filter>
+    </ClCompile>
+    <ClCompile Include="render\direct3d\SDL_shaders_d3d.c">
+      <Filter>Source Files\render\direct3d</Filter>
+    </ClCompile>
+    <ClCompile Include="render\opengles2\SDL_render_gles2.c">
+      <Filter>Source Files\render\opengles2</Filter>
+    </ClCompile>
+    <ClCompile Include="render\opengles2\SDL_shaders_gles2.c">
+      <Filter>Source Files\render\opengles2</Filter>
+    </ClCompile>
+    <ClCompile Include="video\dummy\SDL_nullevents.c">
+      <Filter>Source Files\video\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="video\dummy\SDL_nullframebuffer.c">
+      <Filter>Source Files\video\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="video\dummy\SDL_nullvideo.c">
+      <Filter>Source Files\video\dummy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

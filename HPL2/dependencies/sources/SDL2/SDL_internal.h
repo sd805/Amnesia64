@@ -39,7 +39,7 @@
 #define SDL_small_alloc(type, count, pisstack) ( (*(pisstack) = ((sizeof(type)*(count)) < SDL_MAX_SMALL_ALLOC_STACKSIZE)), (*(pisstack) ? SDL_stack_alloc(type, count) : (type*)SDL_malloc(sizeof(type)*(count))) )
 #define SDL_small_free(ptr, isstack) if ((isstack)) { SDL_stack_free(ptr); } else { SDL_free(ptr); }
 
-#include "dynapi/SDL_dynapi.h"
+//#include "dynapi/SDL_dynapi.h"
 
 #if SDL_DYNAMIC_API
 #include "dynapi/SDL_dynapi_overrides.h"
