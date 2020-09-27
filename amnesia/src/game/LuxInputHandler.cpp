@@ -1119,7 +1119,7 @@ void cLuxInputHandler::UpdateGamePlayerInput()
 	cVector2l vMouseRelPos = mpInput->GetMouse()->GetRelPosition();
 	cVector2f vMouseRelPosFloat = cVector2f(vMouseRelPos.x, vMouseRelPos.y)*mfMouseSensitivity;
 	cVector2l vAbsRel = cMath::RoundToInt(vMouseRelPosFloat);
-	cVector2f vRelPos = cVector2f((float)vAbsRel.x,(float)vAbsRel.y) / (1.7 * mpGraphics->GetLowLevel()->GetScreenSizeFloat().y);
+	cVector2f vRelPos = cVector2f((float)vAbsRel.x,(float)vAbsRel.y) / (1.7f * mpGraphics->GetLowLevel()->GetScreenSizeFloat().y);
 	cVector2f vFinalPos;
 
 	//Check if position should be smoothed.
@@ -1193,7 +1193,7 @@ void cLuxInputHandler::UpdateGamePlayerInput()
 			///////////////
 			// Make up for the dead zone
 			vAnalogLookAxis -= cVector2f(cMath::Sign(vAnalogLookAxis.x), cMath::Sign(vAnalogLookAxis.y)) * mpPad->GetAxisDeadZoneRadiusValue();
-			vAnalogLookAxis *= 1.0 / (1.0f - mpPad->GetAxisDeadZoneRadiusValue());
+			vAnalogLookAxis *= 1.0f / (1.0f - mpPad->GetAxisDeadZoneRadiusValue());
 
 			cVector2f vExponent = cMath::Vector2Abs(vAnalogLookAxis);	vExponent.x = sqrtf(vExponent.x); vExponent.y = sqrtf(vExponent.y);
 			cVector2f vGamepadPos = (vAnalogLookAxis * vExponent) * mfGamepadLookSensitivity*gpBase->mpEngine->GetStepSize();
