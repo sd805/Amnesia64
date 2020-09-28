@@ -1729,8 +1729,8 @@ namespace hpl {
 						for(int i=0; i< 3; i++)
 						{
 							DataVec[i].mlVtx = vIndexArray[lTriangleAdd + i*lTriElements + Geometry.mlPosIdxNum];
-							DataVec[i].mlNorm = vIndexArray[lTriangleAdd + i*lTriElements + Geometry.mlNormIdxNum];
-							DataVec[i].mlTex = vIndexArray[lTriangleAdd + i*lTriElements + Geometry.mlTexIdxNum];
+							DataVec[i].mlNorm = Geometry.mlNormIdxNum >= 0 ? vIndexArray[lTriangleAdd + i*lTriElements + Geometry.mlNormIdxNum] : 0;
+							DataVec[i].mlTex = Geometry.mlTexIdxNum >= 0 ? vIndexArray[lTriangleAdd + i*lTriElements + Geometry.mlTexIdxNum] : 0;
 						}
 					}
 
