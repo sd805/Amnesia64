@@ -1140,7 +1140,7 @@ bool cLuxBase::InitEngine()
 	vars.mSound.mlStreamBufferSize = mpConfigHandler->mlSoundStreamBufferSize;
 
 	// Sound device filter set here (if needed)
-#if defined(WIN32)
+#if defined(_WIN32)
 	iLowLevelSound::SetSoundDeviceNameFilter("software");
 #endif
 	

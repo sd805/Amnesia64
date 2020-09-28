@@ -17,7 +17,7 @@
  * along with Amnesia: The Dark Descent.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifdef WIN32
+#ifdef _WIN32
 #pragma comment(lib, "OpenGL32.lib")
 #pragma comment(lib, "GLu32.lib")
 //#pragma comment(lib, "GLaux.lib")
@@ -58,11 +58,11 @@
 #include "SDL/SDL_syswm.h"
 #endif
 
-#ifdef WIN32
+#ifdef _WIN32
 #include "impl/TaskKeyHook.h"
 #endif
 
-#ifndef WIN32
+#ifndef _WIN32
 	#if defined __ppc__ || defined(__LP64__)
 		#define CALLBACK
 	#else
@@ -96,7 +96,7 @@ namespace hpl {
 
 		mbDoubleSidedStencilIsSet = false;
 
-#if defined(WIN32) && !SDL_VERSION_ATLEAST(2,0,0)
+#if defined(_WIN32) && !SDL_VERSION_ATLEAST(2,0,0)
 		mhKeyTrapper = NULL;
 #endif
 
@@ -135,7 +135,7 @@ namespace hpl {
 
 	cLowLevelGraphicsSDL::~cLowLevelGraphicsSDL()
 	{
-		//#ifdef WIN32
+		//#ifdef _WIN32
 		//	if(mhKeyTrapper) FreeLibrary(mhKeyTrapper);
 		//#endif
 
@@ -290,7 +290,7 @@ namespace hpl {
 		}
         // update with the screen size ACTUALLY obtained
         mvScreenSize = cVector2l(mpScreen->w, mpScreen->h);
-#   ifdef WIN32
+#   ifdef _WIN32
 		//////////////////////////////
 		// Set up window position
 		if(abFullscreen==false)
@@ -314,7 +314,7 @@ namespace hpl {
         }
 
 		//Trap Alt tab if in fullscreen
-#if defined(WIN32) && !SDL_VERSION_ATLEAST(2,0,0)
+#if defined(_WIN32) && !SDL_VERSION_ATLEAST(2,0,0)
 		if(abFullscreen)
 		{
 			//mhKeyTrapper = LoadLibrary( "keyhook.dll" );
@@ -333,7 +333,7 @@ namespace hpl {
 		}
 
 		///Setup up windows specifc context:
-#if defined(WIN32) && !SDL_VERSION_ATLEAST(2,0,0)
+#if defined(_WIN32) && !SDL_VERSION_ATLEAST(2,0,0)
 		mGLContext = wglGetCurrentContext();
 		mDeviceContext = wglGetCurrentDC();
 #endif
@@ -702,7 +702,7 @@ namespace hpl {
         ;
 #if SDL_VERSION_ATLEAST(2, 0, 0)
         SDL_GL_SetSwapInterval(abX ? (abAdaptive ? -1 : 1) : 0);
-#elif defined(WIN32)
+#elif defined(_WIN32)
 		if(WGLEW_EXT_swap_control)
 		{
 			wglSwapIntervalEXT(abX ? (abAdaptive ? -1 : 1) : 0);

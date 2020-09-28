@@ -708,7 +708,7 @@ void cLuxInputHandler::UpdateGlobalInput()
 	{
 		tWString sFileName = _W("");
 		tWString sBaseName = _W("Screen_");
-#ifndef WIN32
+#ifndef _WIN32
 		tWString sScreenShotDir = cPlatform::GetSystemSpecialPath(eSystemPath_Personal);
 		if (cPlatform::FolderExists(cString::AddSlashAtEndW(sScreenShotDir) + _W("Desktop"))) {
 			sScreenShotDir = cString::AddSlashAtEndW(sScreenShotDir) + _W("Desktop");

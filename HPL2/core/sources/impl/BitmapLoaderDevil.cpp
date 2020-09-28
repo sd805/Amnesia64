@@ -25,7 +25,7 @@
 #include "system/String.h"
 #include "system/Platform.h"
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <io.h>
 #endif
 

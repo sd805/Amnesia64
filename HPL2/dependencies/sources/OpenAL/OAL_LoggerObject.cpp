@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#if defined(WIN32)
+#if defined(_WIN32)
 #define UNICODE
 #include <shlobj.h>
 #endif
@@ -103,7 +103,7 @@ wstring BuildLogFilename ( const string& asFilename )
 	wstring wsTemp;
 	wsName = hpl::cString::To16Char(asFilename);
 	
-	#if defined(WIN32)
+	#if defined(_WIN32)
 
 		WCHAR sPath[MAX_PATH];
 		if(SUCCEEDED(SHGetFolderPath(NULL, 

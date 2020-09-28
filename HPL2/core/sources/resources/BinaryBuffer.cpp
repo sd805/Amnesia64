@@ -839,7 +839,7 @@ namespace hpl {
 /*
     void cBinaryBuffer::GetStringW(tWString *apStr)
     {
-    #ifdef WIN32
+    #ifdef _WIN32
         *apStr = _W("");
         wchar_t c = (wchar_t)GetShort16();
         while(c != 0 && IsEOF()==false)
