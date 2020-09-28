@@ -146,6 +146,10 @@ namespace hpl {
 
 	void cLogWriter::Write(const tString& asMessage)
 	{
+#ifdef _WIN32
+		OutputDebugStringA(asMessage.c_str());
+#endif
+
 		if(!mpFile) ReopenFile();
 		
 		if(mpFile)
