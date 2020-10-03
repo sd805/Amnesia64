@@ -1463,13 +1463,13 @@ void dgBroadPhaseCollision::UpdateContactsBroadPhaseEnd (dgFloat32 timestep)
 	for (dgActiveContacts::dgListNode* contactNode = contactList.GetFirst(); contactNode; contactNode = contactNode->GetNext()) {
 		dgContact* const contact = contactNode->GetInfo();
 		if ((contact->m_broadphaseLru != lru) || (contact->GetCount() == 0)) {
-// note this is in observation (to prevent bodies from not going to sleep  inside triggers	
-//			if (! (contact->m_body0->m_sleeping & contact->m_body1->m_sleeping) ) {
-			const dgBody* const body0 = contact->m_body0;
-			const dgBody* const body1 = contact->m_body1;
-			if (! ((body0->m_sleeping | body0->m_equilibrium) & (body1->m_sleeping | body1->m_equilibrium)) ) {
-				deadContacs[count] = contact;
-				count ++;
+			if (!(contact->m_body0->m_sleeping & contact->m_body1->m_sleeping)) {
+				const dgBody* const body0 = contact->m_body0;
+				const dgBody* const body1 = contact->m_body1;
+				if (!((body0->m_sleeping | body0->m_equilibrium) & (body1->m_sleeping | body1->m_equilibrium))) {
+					deadContacs[count] = contact;
+					count++;
+				}
 			}
 		}
 	}

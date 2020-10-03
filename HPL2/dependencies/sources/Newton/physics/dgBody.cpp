@@ -821,8 +821,7 @@ void dgBody::Freeze ()
 void dgBody::Unfreeze ()
 {
 	if (m_invMass.m_w > dgFloat32 (0.0f)) {
-// note this is in observation (to prevent bodies from not going to sleep  inside triggers	               
-//		m_equilibrium = false;			
+		m_equilibrium = false;			
 		if (m_freeze) {
 			m_freeze = false;
 			dgBodyMasterListRow::dgListNode* node; 	
