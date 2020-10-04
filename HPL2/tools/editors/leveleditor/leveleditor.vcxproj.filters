@@ -717,9 +717,4 @@
       <Filter>NewStuff</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="buildcounterinput.txt">
-      <Filter>LevelEditor</Filter>
-    </None>
-  </ItemGroup>
 </Project>
