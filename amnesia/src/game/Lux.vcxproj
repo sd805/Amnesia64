@@ -270,6 +270,7 @@
   <ItemGroup>
     <ClInclude Include="LuxAchievementHandler.h" />
     <ClInclude Include="LuxBase.h" />
+    <ClInclude Include="LuxBasePersonal.h" />
     <ClInclude Include="LuxConfigHandler.h" />
     <ClInclude Include="LuxEnemy_ManPig.h" />
     <ClInclude Include="LuxHelpFuncs.h" />
