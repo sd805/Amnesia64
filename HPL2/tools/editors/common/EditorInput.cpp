@@ -218,10 +218,13 @@ cEditorInputText::cEditorInputText(iEditorWindow* apWindow,
 								   const tWStringList& alstInputLabels) : iEditorInputLabeled(apWindow, avPos, asLabel, asName, apParent)
 {
 	tWStringList::const_iterator itLabels = alstInputLabels.begin();
-	for(int i=0;i<alAmount;++i,++itLabels)
+	for(int i=0;i<alAmount;++i)
 	{
 		// Setup Label
-		tWString sLabel = (itLabels==alstInputLabels.end())?_W(""):*itLabels;
+		tWString sLabel;
+		if (itLabels != alstInputLabels.end()) {
+			sLabel = *itLabels++;
+		}
 		cWidgetLabel* pL = mpSet->CreateWidgetLabel(0,0,sLabel, mpHandle);
 		mvL.push_back(pL);
 		pL->SetSize(cVector2f(pL->GetDefaultFontType()->GetLength(mvFontSize, sLabel.c_str()), mvFontSize.y));
