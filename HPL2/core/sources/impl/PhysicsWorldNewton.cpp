@@ -184,7 +184,7 @@ namespace hpl {
 									NewtonSetFrictionModel(mpNewtonWorld,1);
 									break;
 		case ePhysicsAccuracy_Medium:
-									NewtonSetSolverModel(mpNewtonWorld,2);
+									NewtonSetSolverModel(mpNewtonWorld,3);
 									NewtonSetFrictionModel(mpNewtonWorld,1);
 									break;
 		case ePhysicsAccuracy_High:
