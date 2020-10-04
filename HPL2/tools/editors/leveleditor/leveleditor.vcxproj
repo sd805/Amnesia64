@@ -271,6 +271,7 @@
     <ClCompile Include="..\common\EdWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\LuxBasePersonal.h" />
     <ClInclude Include="..\common\EditorBaseClasses.h" />
     <ClInclude Include="..\common\EditorGrid.h" />
     <ClInclude Include="..\common\EditorHelper.h" />

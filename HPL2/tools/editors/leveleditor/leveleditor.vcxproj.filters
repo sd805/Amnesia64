@@ -716,5 +716,6 @@
     <ClInclude Include="..\common\EdWorld.h">
       <Filter>NewStuff</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\LuxBasePersonal.h" />
   </ItemGroup>
 </Project>
