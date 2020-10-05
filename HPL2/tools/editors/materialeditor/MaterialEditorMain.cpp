@@ -20,7 +20,7 @@
 #include "MaterialEditor.h"
 #include "BuildID_MaterialEditor.h"
 
-#ifdef WIN32
+#ifdef _WIN32
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #endif
@@ -33,7 +33,7 @@
 int hplMain(const tString& asCommandLine)
 {
 	//To allow drag and drop:
-	#ifdef WIN32
+	#ifdef _WIN32
 	//////////////////////////
 	// Init BlackBox
 		HINSTANCE hBlackBoxLib = LoadLibrary( "BlackBox.dll" );
@@ -54,7 +54,7 @@ int hplMain(const tString& asCommandLine)
 
 	//////////////////////////
 	// Exit BlackBox
-	#ifdef WIN32
+	#ifdef _WIN32
 			if(hBlackBoxLib) FreeLibrary(hBlackBoxLib);
 	#endif
 

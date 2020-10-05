@@ -20,7 +20,7 @@
 #include "ParticleEditor.h"
 #include "BuildID_ParticleEditor.h"
 
-#ifdef WIN32
+#ifdef _WIN32
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #endif
@@ -35,7 +35,7 @@ int hplMain(const tString& asCommandLine)
 {
 	//////////////////////////
 	// Init BlackBox
-	#ifdef WIN32
+	#ifdef _WIN32
 		HINSTANCE hBlackBoxLib = LoadLibrary( "BlackBox.dll" );
 	#endif
 
@@ -51,7 +51,7 @@ int hplMain(const tString& asCommandLine)
 
 	//////////////////////////
 	// Exit BlackBox
-	#ifdef WIN32
+	#ifdef _WIN32
 			if(hBlackBoxLib) FreeLibrary(hBlackBoxLib);
 	#endif
 
