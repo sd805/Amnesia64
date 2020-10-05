@@ -654,9 +654,4 @@
       <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="buildcounterinput.txt">
-      <Filter>modeleditor</Filter>
-    </None>
-  </ItemGroup>
 </Project>
