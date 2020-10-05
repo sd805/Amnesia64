@@ -2252,7 +2252,7 @@ public:
 
 //-----------------------------------------------------------------------
 
-#ifdef WIN32
+#ifdef _WIN32
 	#include <Windows.h>
 #endif
 
@@ -2267,12 +2267,17 @@ namespace hpl {
 int hplMain(const tString &asCommandline)
 {
 //To allow drag and drop:
-#ifdef WIN32
-	TCHAR buffer[MAX_PATH];
-	HMODULE module = GetModuleHandle(NULL);
-	GetModuleFileName(module, buffer,MAX_PATH);
-	tString sDir = cString::GetFilePath(buffer);
-	SetCurrentDirectory(sDir.c_str());
+#ifdef _WIN32
+	// BUzer: don't change current directory if the game resources can already be found from here.
+	// This allows debugging from IDE when the .exe file is not in the game's directory.
+	if (!cPlatform::FileExists(L"core\\models\\core_box.dae"))
+	{
+		TCHAR buffer[MAX_PATH];
+		HMODULE module = GetModuleHandle(NULL);
+		GetModuleFileName(module, buffer, MAX_PATH);
+		tString sDir = cString::GetFilePath(buffer);
+		SetCurrentDirectory(sDir.c_str());
+	}
 #endif
 #if __APPLE__
 	tWString sEditorDir = cPlatform::GetWorkingDir();
