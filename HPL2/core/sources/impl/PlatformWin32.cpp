@@ -256,14 +256,19 @@ namespace hpl {
 
 		//Get the search string
 		wchar_t sSpec[256];
-		wchar_t end = sDir[sDir.size()-1];
 
-		if(end == _W('\\') || end== _W('/'))
-			swprintf(sSpec,256,_W("%s%s"),sDir.c_str(),asMask.c_str());
+		if (sDir.empty())
+			swprintf(sSpec, 256, _W("%s"), asMask.c_str());
 		else
 		{
-			//these windows functions only works with "\".. sucks ...
-			swprintf(sSpec,256,_W("%s\\%s"),sDir.c_str(),asMask.c_str());
+			wchar_t end = sDir[sDir.size() - 1];
+			if (end == _W('\\') || end == _W('/'))
+				swprintf(sSpec, 256, _W("%s%s"), sDir.c_str(), asMask.c_str());
+			else
+			{
+				//these windows functions only works with "\".. sucks ...
+				swprintf(sSpec, 256, _W("%s\\%s"), sDir.c_str(), asMask.c_str());
+			}
 		}
 
 		//The needed structs
