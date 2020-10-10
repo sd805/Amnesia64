@@ -539,17 +539,27 @@ namespace hpl {
 			tWString t = tWString(_W("/"));
 			cString::GetStringWVec(sPath, vInputPath, &t);
 
+			bool pathLeadsOutside = false;
+
 			for(int i=0;i<(int)vInputPath.size();++i)
 			{
 				const tWString& sPathPiece = vInputPath[i];
 
 				if(sPathPiece==_W(".") || sPathPiece==_W(""))
 					;
-				else if(sPathPiece==_W(".."))
-					mvCurrentDirFullPath.pop_back();
+				else if(sPathPiece == _W(".."))
+				{
+					if(mvCurrentDirFullPath.empty())
+						pathLeadsOutside = true;
+					else
+						mvCurrentDirFullPath.pop_back();
+				}
 				else
 					mvCurrentDirFullPath.push_back(sPathPiece);
 			}
+
+			if(pathLeadsOutside)
+				Error("Path '%S' leads outside the system root directory\n", asPath.c_str());
 		}
 	}
 
