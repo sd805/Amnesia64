@@ -91,7 +91,7 @@ void iEditorInput::AddCallback(eEditorInputCallback aCallback, void* apCallbackO
 		msg = eGuiMessage_ButtonPressed;
 		break;
 	default:
-		break;
+		return;
 	}
 
 	mpHandle->AddCallback(msg, apCallbackObject, apCallback);

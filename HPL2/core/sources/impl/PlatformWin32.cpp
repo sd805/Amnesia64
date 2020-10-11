@@ -372,9 +372,13 @@ namespace hpl {
 
 	tWString cPlatform::GetWorkingDir()
 	{
-		tWString sDir = tWString( _wgetcwd(NULL,0));
-
-		return sDir;
+		wchar_t* buffer;
+		if((buffer = _wgetcwd(NULL, 0)) == NULL)
+			return tWString();
+		
+		auto result = tWString(buffer);
+		free(buffer);
+		return result;
 	}
 
 	//-----------------------------------------------------------------------
@@ -479,20 +483,22 @@ namespace hpl {
 
 	void cPlatform::CopyTextToClipboard(const tWString &asText)
 	{
-		OpenClipboard(NULL);
+		if(!OpenClipboard(NULL))
+			return;
+
 		EmptyClipboard();
 
-		HGLOBAL clipbuffer;
-		wchar_t * pBuffer;
-		EmptyClipboard();
-		clipbuffer = GlobalAlloc(GMEM_DDESHARE, (asText.size()+1) *sizeof(wchar_t));
-		pBuffer = (wchar_t*)GlobalLock(clipbuffer);
-		wcscpy(pBuffer, asText.c_str());
-		//GlobalUnlock(clipbuffer);
-
-		SetClipboardData(CF_UNICODETEXT, clipbuffer);
-
-		GlobalUnlock(clipbuffer); 
+		HGLOBAL clipbuffer = GlobalAlloc(GMEM_MOVEABLE, (asText.size()+1) * sizeof(wchar_t));
+		if(clipbuffer)
+		{
+			wchar_t* pBuffer = (wchar_t*)GlobalLock(clipbuffer);
+			if(pBuffer)
+			{
+				wcscpy(pBuffer, asText.c_str());
+				GlobalUnlock(clipbuffer);
+				SetClipboardData(CF_UNICODETEXT, clipbuffer);
+			}
+		}
 
 		CloseClipboard();
 	}
@@ -572,7 +578,8 @@ namespace hpl {
 
 		avDestVidModes.clear();
 
-		DEVMODE mode;
+		DEVMODE mode = {};
+		mode.dmSize = sizeof(DEVMODE);
 		int lModeCounter=0;
 		while(EnumDisplaySettings(NULL, lModeCounter, &mode))
 		{
@@ -643,14 +650,19 @@ namespace hpl {
 
 		tWString sCommandLine = asPath + _W(" ") + asParams;
 
-		return CreateProcess(asPath.c_str(), (LPWSTR)sCommandLine.c_str(), NULL, NULL, false, 0, NULL,NULL, &si,&pi)==TRUE;
+		bool result = CreateProcess(asPath.c_str(), (LPWSTR)sCommandLine.c_str(), NULL, NULL, false, 0, NULL, NULL, &si, &pi) == TRUE;
+
+		CloseHandle(pi.hProcess);
+		CloseHandle(pi.hThread);
+
+		return result;
 	}
 
 	//-----------------------------------------------------------------------
 
 	bool cPlatform::OpenFileOnShell( const tWString& asPath )
 	{
-		int lStatusCode = (int)ShellExecute(NULL, _W("open"), asPath.c_str(), NULL, NULL, SW_SHOWMAXIMIZED);
+		auto lStatusCode = (uintptr_t)ShellExecute(NULL, _W("open"), asPath.c_str(), NULL, NULL, SW_SHOWMAXIMIZED);
 		bool bRet = (lStatusCode > 32);
 
 		tWString sMessage = _W("Cannot open file '") + asPath + _W("' - \n");

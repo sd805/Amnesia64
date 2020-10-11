@@ -380,7 +380,7 @@ namespace hpl {
 
 		/////////
 		// Find difference
-		int lDifferenceAt = 0;
+		size_t lDifferenceAt = 0;
 		size_t lPathSize = vPathFolders.size();
 		size_t lRelativeSize = vRelativeFolders.size();
 		size_t lCount = lPathSize < lRelativeSize ? lPathSize : lRelativeSize;
@@ -440,7 +440,7 @@ namespace hpl {
 
 		/////////
 		// Find difference
-		int lDifferenceAt = 0;
+		size_t lDifferenceAt = 0;
 		size_t lPathSize = vPathFolders.size();
 		size_t lRelativeSize = vRelativeFolders.size();
 		size_t lCount = lPathSize < lRelativeSize ? lPathSize : lRelativeSize;

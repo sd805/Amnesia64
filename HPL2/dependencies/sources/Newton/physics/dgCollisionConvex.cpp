@@ -1480,7 +1480,7 @@ dgInt32 dgCollisionConvex::CalculatePlaneIntersectionSimd (const dgVector& norma
 				dgConvexSimplexEdge* ptr1 = ptr->m_next;
 				for (; ptr1 != ptr; ptr1 = ptr1->m_next) {
 //					side0 = plane.Evalue (m_vertex[ptr1->m_twin->m_vertex]); 
-					_ASSERTE (m_vertex[ptr1->m_twin->m_vertex].m_w = dgFloat32 (1.0f));
+					_ASSERTE (m_vertex[ptr1->m_twin->m_vertex].m_w == dgFloat32 (1.0f));
 //					tmp = simd_mul_v (planeSimdD, *(simd_type*)&m_vertex[ptr1->m_twin->m_vertex]);
 //					tmp = simd_add_v (tmp, simd_move_hl_v (tmp, tmp));
 //					tmp = simd_add_s(tmp, simd_permut_v (tmp, tmp, PURMUT_MASK (3,3,3,1)));

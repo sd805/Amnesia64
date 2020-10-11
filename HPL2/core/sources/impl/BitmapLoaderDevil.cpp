@@ -192,7 +192,7 @@ namespace hpl {
 
 	ILint ILAPIENTRY DevilRead(void *Buffer, ILuint Size, ILuint Number, ILHANDLE Handle)
 	{
-		return fread(Buffer, Size, Number, (FILE*)Handle);
+		return (ILint)fread(Buffer, (size_t)Size, (size_t)Number, (FILE*)Handle);
 	}
 
 	//-----------------------------------------------------------------------

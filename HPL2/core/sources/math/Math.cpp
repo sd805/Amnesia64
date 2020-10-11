@@ -220,7 +220,7 @@ namespace hpl {
 			if(h==360)	h = 0;
 			else		h /= 60;
 
-			sextant = floor(h);
+			sextant = (int)floor(h);
 			fract = h-sextant;
 
 			p = b*(1-s);
@@ -2045,7 +2045,7 @@ namespace hpl {
 	cVector3f cMath::Vector3SphereSurfacePoint(const cVector2f& avSeed, float afRadius)
 	{
 		cVector3f vOut;
-		vOut.x = avSeed.x*2.0f - 1.0;
+		vOut.x = avSeed.x*2.0f - 1.0f;
 		float fT = k2Pif * avSeed.y;
 		float fW = sqrt( 1 - vOut.x*vOut.x );
 		vOut.y = fW * sin( fT );
