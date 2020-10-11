@@ -135,7 +135,7 @@ namespace hpl {
 		bool IsEnabled() { return mbEnabled; }
 		void SetEnabled(bool abX) { mbEnabled = abX; }
 
-		bool ProcessKeyPress(const cKeyPress& aKey);
+		bool DoesAcceptKeyPress(const cKeyPress& aKey);
 		bool Exec();
 
 		tString ToString();
@@ -512,7 +512,7 @@ namespace hpl {
 		bool DrawFocus(iWidget* apWidget, const cGuiMessageData& aData);
 		kGuiCallbackDeclarationEnd(DrawFocus);
 
-		bool ExecShortcut(const cKeyPress& aKeyPress);
+		cGuiGlobalShortcut* FindShortcut(const cKeyPress& aKeyPress);
 
 		void UpdateToolTip(float afTimeStep);
 
