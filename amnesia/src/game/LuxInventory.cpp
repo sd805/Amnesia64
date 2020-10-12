@@ -1052,7 +1052,7 @@ cLuxInventory_Item * cLuxInventory::AddItem(const tString& asName, eLuxItemType 
 		if (pVar == NULL)
 		{
 			Error("Couldn't find Global var '%s'\n", asName.c_str());
-			//return;
+			return NULL;
 		}
 		tString sVal = pVar->msVal;
 		int intVal = 0;

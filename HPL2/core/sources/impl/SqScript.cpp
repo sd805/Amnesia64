@@ -83,7 +83,7 @@ namespace hpl {
 
 		/////////////////////////////////////////
 		// Load file
-		int lLength;
+		int lLength = 0;
 		char *pCharBuffer = NULL;
 		
 		/////////////////////////////////////

@@ -173,7 +173,7 @@ namespace hpl {
 	}
 	static ILboolean ILAPIENTRY DevilEof(ILHANDLE apHandle)
 	{
-		ILuint OrigPos, FileSize;
+		ILint OrigPos, FileSize;
 
 		// Find out the filesize for checking for the end of file
 		OrigPos = DevilTell(apHandle);

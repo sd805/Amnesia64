@@ -134,6 +134,10 @@ namespace hpl {
                 pCur+=6;
             }
 #endif
+			else {
+				uTemp = 0xfffd; // replacement character
+				pCur += 1;
+			}
             sTemp.push_back((wchar_t)uTemp);
         }
 

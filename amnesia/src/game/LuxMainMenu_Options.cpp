@@ -173,7 +173,6 @@ void cLuxMainMenu_Options::ExitPressed()
 
 void cLuxMainMenu_Options::CreateMainGui()
 {
-	cWidgetButton *pButton;
 	float fLeftBorderSize = 30;
 	float fUpperBorderSize = 10;
 
