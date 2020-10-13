@@ -34,13 +34,6 @@ cLuxBase* gpBase = NULL;
 int hplMain(const tString &asCommandline)
 {
 	//////////////////////////
-	// Init BlackBox
-	#ifdef _WIN32
-		HINSTANCE hBlackBoxLib = LoadLibrary( "BlackBox.dll" );
-	#endif
-
-
-	//////////////////////////
 	// Game creation and exit
 	gpBase = hplNew( cLuxBase, ());
 
@@ -63,12 +56,6 @@ int hplMain(const tString &asCommandline)
 	hplDelete(gpBase);
 
 	cMemoryManager::LogResults();
-
-	//////////////////////////
-	// Exit BlackBox
-	#ifdef _WIN32
-			if(hBlackBoxLib) FreeLibrary(hBlackBoxLib);
-	#endif
 
 	return 0;
 }

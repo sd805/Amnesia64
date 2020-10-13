@@ -34,9 +34,6 @@ int hplMain(const tString& asCommandLine)
 {
 	//To allow drag and drop:
 	#ifdef _WIN32
-	//////////////////////////
-	// Init BlackBox
-		HINSTANCE hBlackBoxLib = LoadLibrary( "BlackBox.dll" );
 		// BUzer: don't change current directory if the game resources can already be found from here.
 		// This allows debugging from IDE when the .exe file is not in the game's directory.
 		if (!cPlatform::FileExists(L"core\\models\\core_box.dae"))
@@ -56,12 +53,6 @@ int hplMain(const tString& asCommandLine)
 	hplDelete(pEditor);
 	DestroyHPLEngine(pEngine);
 	cMemoryManager::LogResults();
-
-	//////////////////////////
-	// Exit BlackBox
-	#ifdef _WIN32
-			if(hBlackBoxLib) FreeLibrary(hBlackBoxLib);
-	#endif
 
 	return 0;
 }

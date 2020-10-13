@@ -39,12 +39,6 @@ using namespace hpl;
 
 int hplMain(const tString& asCommandLine)
 {
-	//////////////////////////
-	// Init BlackBox
-	#ifdef _WIN32
-		HINSTANCE hBlackBoxLib = LoadLibrary( "BlackBox.dll" );
-	#endif
-
 	//cMemoryManager::SetLogCreation(true);
 
 	cLevelEditor* pEditor = hplNew(cLevelEditor, ());
@@ -57,12 +51,6 @@ int hplMain(const tString& asCommandLine)
 	hplDelete(pEditor);
 	DestroyHPLEngine(pEngine);
 	cMemoryManager::LogResults();
-
-	//////////////////////////
-	// Exit BlackBox
-	#ifdef _WIN32
-			if(hBlackBoxLib) FreeLibrary(hBlackBoxLib);
-	#endif
 
 	return 0;
 }

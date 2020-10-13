@@ -33,12 +33,6 @@
 
 int hplMain(const tString& asCommandLine)
 {
-	//////////////////////////
-	// Init BlackBox
-	#ifdef _WIN32
-		HINSTANCE hBlackBoxLib = LoadLibrary( "BlackBox.dll" );
-	#endif
-
 	cParticleEditor* pEditor = hplNew(cParticleEditor, ());
 	cEngine* pEngine = pEditor->Init(NULL, "ParticleEditor", GetBuildID_ParticleEditor(), false);
 
@@ -48,12 +42,6 @@ int hplMain(const tString& asCommandLine)
 	hplDelete(pEngine);
 
 	cMemoryManager::LogResults();
-
-	//////////////////////////
-	// Exit BlackBox
-	#ifdef _WIN32
-			if(hBlackBoxLib) FreeLibrary(hBlackBoxLib);
-	#endif
 
 	return 0;
 }
