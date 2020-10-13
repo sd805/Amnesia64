@@ -128,6 +128,11 @@ namespace hpl {
 		// Set up memory
 		hplFree(mpData);
 		mpData = (char*)hplMalloc(lFileSize);
+		if (mpData == NULL)
+		{
+			Error("Failed to allocate %zu bytes\n", lFileSize);
+			return false;
+		}
 		mlDataSize = lFileSize;
 		mlReservedDataSize = lFileSize;
 		mlDataPos =0;
@@ -285,7 +290,7 @@ namespace hpl {
 		int ret = deflateInit(&zipStream, alCompressionLevel<0 ? Z_DEFAULT_COMPRESSION : alCompressionLevel);
 		if (ret != Z_OK) return false;
 
-		zipStream.avail_in = alSize;
+		zipStream.avail_in = (uInt)alSize;
 		zipStream.next_in = (Bytef *)apSrcData;
 
 		///////////////////////////
@@ -322,7 +327,7 @@ namespace hpl {
 			size_t lTotalDataSize = mlDataPos - lStartPos - 4;
 			
 			int *pSizeDataPtr = (int*)mpData[lStartPos];
-			*pSizeDataPtr = lTotalDataSize;
+			*pSizeDataPtr = (int)lTotalDataSize;
 		}
 
 		//Log("Compress Size: %d\n", mlDataPos - lStartPos);
@@ -348,7 +353,7 @@ namespace hpl {
 		zipStream.zalloc = Z_NULL;
 		zipStream.zfree = Z_NULL;
 		zipStream.opaque = Z_NULL;
-		zipStream.avail_in = alSize;
+		zipStream.avail_in = (uInt)alSize;
 		zipStream.next_in = (Bytef *)apSrcData;
 		
 		///////////////////////////
@@ -438,7 +443,7 @@ namespace hpl {
 
 	unsigned int cBinaryBuffer::AddCRC_End(unsigned int alKey)
 	{
-		unsigned int lCRC = GetCRC(alKey, mlCRCStartPos+4, mlDataSize - mlCRCStartPos - 4);
+		unsigned int lCRC = GetCRC(alKey, (int)mlCRCStartPos+4, (int)(mlDataSize - mlCRCStartPos) - 4);
 		*((unsigned int*)GetDataPointerAtPos(mlCRCStartPos)) = lCRC;
 
 		mlCRCStartPos =0;
@@ -915,7 +920,13 @@ namespace hpl {
 		if(mlDataPos + alSize > mlReservedDataSize)
 		{
 			size_t lNewDataSize = mlDataSize*2 + alSize;
-			mpData = (char*)hplRealloc(mpData, lNewDataSize);
+			char* newData = (char*)hplRealloc(mpData, lNewDataSize);
+			if (newData == NULL)
+			{
+				Error("Failed to allocate %zu bytes\n", lNewDataSize);
+				return;
+			}
+			mpData = newData;
 			mlReservedDataSize = lNewDataSize;
 		}
 

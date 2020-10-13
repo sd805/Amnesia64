@@ -676,7 +676,7 @@ void cOAL_Source::SetElapsedTime(double afTime)
 	case eOAL_AudioDataType_Stream:
 		{
 			cOAL_Stream* pStream = (cOAL_Stream*)mpAudioData;
-			pStream->Seek((float)afTime/mpAudioData->GetTotalTime());
+			pStream->Seek((float)(afTime/mpAudioData->GetTotalTime()));
 		}
 		break;
 	}

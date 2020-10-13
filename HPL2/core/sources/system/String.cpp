@@ -522,7 +522,7 @@ namespace hpl {
 		if(asPath.size()==0) return "";
 
 		char lLastChar = asPath[asPath.size()-1];
-		if(lLastChar == '/' || lLastChar == '\\') return cString::Sub(asPath,0, asPath.size()-1);
+		if(lLastChar == '/' || lLastChar == '\\') return cString::Sub(asPath,0, (int)asPath.size()-1);
 
 		return asPath;
 	}
@@ -532,7 +532,7 @@ namespace hpl {
 		if(asPath.size()==0) return _W("");
 
 		wchar_t lLastChar = asPath[asPath.size()-1];
-		if(lLastChar == _W('/') || lLastChar == _W('\\')) return cString::SubW(asPath,0, asPath.size()-1);
+		if(lLastChar == _W('/') || lLastChar == _W('\\')) return cString::SubW(asPath,0, (int)asPath.size()-1);
 
 		return asPath;
 	}

@@ -2577,7 +2577,7 @@ tWString cLuxInventory::ParseStringForGamepadIconsRemoval(const tWString & asCur
 				/////////
 				// Make room for the icon
 				sOutput += sReplace;
-				lPosition += sReplace.size();
+				lPosition += (int)sReplace.size();
 
 				bParseVar = false;
 			}

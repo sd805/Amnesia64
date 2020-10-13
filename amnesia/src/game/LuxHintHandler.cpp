@@ -358,7 +358,7 @@ void cLuxHintHandler::ParseStringForGamepadIcons()
 				/////////
 				// Make room for the icon
 				sOutput += sReplace;
-				lPosition += sReplace.size();
+				lPosition += (int)sReplace.size();
 
 				bParseVar = false;
 			}

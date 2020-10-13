@@ -2224,7 +2224,7 @@ void cLuxPlayerDeath::OnDraw(float afFrameTime)
 			float fTAdd = 0.3f * (float)i;
 			float fYAdd = sin(mfT*0.5f + fTAdd) * 5.0f + cos(mfT*0.97f - fTAdd*2.73f) * 3.5f;
 					
-			tWString sChar = cString::SubW(sStr, i,1);
+			tWString sChar = cString::SubW(sStr, (int)i, 1);
 			cVector3f vPos = cVector3f(fX, fY + fYAdd - vFontSize.y*0.5f*fMul, 6);
 			cVector2f vSize = cVector2f(vFontSize.x, vFontSize.y + fabs(fYAdd)*1.5f) * fMul;
 

@@ -1648,11 +1648,11 @@ namespace hpl {
 				if(Geometry.mvArrayVec[i].mbIsInVertex)
 				{
 					if(Geometry.mvArrayVec[i].msType == "NORMAL") {
-						Geometry.mlNormArrayIdx = i;
+						Geometry.mlNormArrayIdx = (int)i;
 						Geometry.mlNormIdxNum = Geometry.mlPosIdxNum;
 					}
 					else if(Geometry.mvArrayVec[i].msType == "TEXCOORD") {
-						Geometry.mlTexArrayIdx = i;
+						Geometry.mlTexArrayIdx = (int)i;
 						Geometry.mlTexIdxNum = Geometry.mlPosIdxNum;
 					}
 				}

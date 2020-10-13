@@ -851,7 +851,7 @@ namespace hpl {
 			pCBModeSelector->SetDefaultFontSize(gvInputFontSize);
 			pCBModeSelector->AddCallback(eGuiMessage_CheckChange, this, kGuiCallback(PickerMode_OnSelect));
 			pCBModeSelector->SetUserData(pMode);
-			pCBModeSelector->SetUserValue(i);
+			pCBModeSelector->SetUserValue((int)i);
 			mvPickerModeSwitches.push_back(pCBModeSelector);
 			
 			////////////////////////////////////////////////////////////////////////////////////////
@@ -861,7 +861,7 @@ namespace hpl {
 			pInput->SetDecimals(0);
 			pInput->SetLowerBound(true, avMin[i]);
 			pInput->SetUpperBound(true, avMax[i]);
-			pInput->SetUserValue(i);
+			pInput->SetUserValue((int)i);
 			if(apCallback) pInput->AddCallback(eGuiMessage_TextBoxEnter, this, apCallback);
 
 			avContainer.push_back(pInput);
@@ -1153,7 +1153,7 @@ namespace hpl {
 		int lMaxLength = pTB->GetMaxTextLength();
 		tWString sHex = pTB->GetText();
 
-		int lDiff = lMaxLength-sHex.length();
+		int lDiff = lMaxLength - (int)sHex.length();
 		sHex.insert(sHex.end(), lDiff, _W('0'));
 
 		cMath::HexWToRGBAHelper(sHex, mColor);

@@ -1324,7 +1324,7 @@ void cLuxMainMenu_Options::SetInputValues(cResourceVarsObject& aObj)
 	{
 		if(lSndDev==mvSoundDevices[i]->GetID())
 		{
-			lSndDevIdx = i;
+			lSndDevIdx = (int)i;
 			break;
 		}
 	}
