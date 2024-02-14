@@ -48,6 +48,10 @@
 
 #include "LuxAreaNodes.h"
 
+#include <Windows.h>
+
+#include "vr/VR.h"
+
 
 //////////////////////////////////////////////////////////////////////////
 // CONSTRUCTORS
@@ -71,8 +75,9 @@ cLuxPlayer::cLuxPlayer() : iLuxUpdateable("LuxPlayer"), iLuxCollideCallbackConta
 
 	//TODO: More setup?
 	cVector2f vScreenSize = gpBase->mpEngine->GetGraphics()->GetLowLevel()->GetScreenSizeFloat();
-	mfAspect = vScreenSize.x / vScreenSize.y;
-	mfFOV = cMath::ToRad(gpBase->mpGameCfg->GetFloat("Player_General","FOV", 0));
+	
+	mfAspect = gpVR->mAspect;
+	mfFOV = cMath::ToRad(gpVR->mFOV);
 	
 	mpCamera->SetFOV(mfFOV);
 	mpCamera->SetAspect(mfAspect);

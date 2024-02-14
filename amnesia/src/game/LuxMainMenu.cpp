@@ -1271,7 +1271,7 @@ void cLuxMainMenu::CreateBackground()
 		else					mpBgWorld = NULL;
 
 		mpBgCamera = mpScene->CreateCamera(eCameraMoveMode_Fly);	
-		mpBgCamera->SetRotateMode(eCameraRotateMode_Matrix);
+		mpBgCamera->SetRotateMode(eCameraRotateMode_EulerAngles);
 
 		//Camera Settings
 		cVector2f vScreenSize = gpBase->mpEngine->GetGraphics()->GetLowLevel()->GetScreenSizeFloat();

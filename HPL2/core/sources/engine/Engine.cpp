@@ -51,6 +51,11 @@
 
 #include "impl/SDLEngineSetup.h"
 
+#include "vr/VR.h"
+#include <iostream>
+#include <string>
+#include <algorithm>
+
 namespace hpl {
 
 	//////////////////////////////////////////////////////////////////////////
@@ -311,6 +316,9 @@ namespace hpl {
 		//Init haptic
 		if(mpHaptic) mpHaptic->Init(mpResources);
 
+		//Init VR
+		gpVR = new cVR();
+
 		Log("Initializing Game Module\n");
 		Log("--------------------------------------------------------\n");
 		//Create the updatehandler
@@ -398,8 +406,8 @@ namespace hpl {
 	//////////////////////////////////////////////////////////////////////////
 
 	//-----------------------------------------------------------------------
-	
-	int glClearUpdateCheck=0;
+
+	int glClearUpdateCheck = 0;
 	void cEngine::Run()
 	{
 		//Log line that ends user init.
@@ -520,40 +528,57 @@ namespace hpl {
 
 			//if(GetGameIsDone()) Log("3\n");
 
+			gpVR->Update();
+
 			////////////////////////////////////
 			// Render frame
 			if(mbLimitFPS==false || bIsUpdated)
 			{
-				///////////////////////////////////////
-           		//Get the the from the last frame.
-				UpdateFrameTimer();
+				gpVR->PreRender();
+				
+				// Render view to the appropriate part of the swapchain image.
+				for (uint32_t eye = 0; eye < 2; eye++) 
+				{
+					gpVR->AcquireSwapchainTexture(eye);
 
-				//On draw callback sending that to gui, etc
-				START_TIMING(OnDraw)
-				mpUpdater->RunMessage(eUpdateableMessage_OnDraw, mfFrameTime);
-				STOP_TIMING(OnDraw)
-				
-				//Render this frame
-				START_TIMING(RenderAll)
-				mpScene->Render(mfFrameTime, tSceneRenderFlag_All);
-				STOP_TIMING(RenderAll)
+					// GL RENDER
 
-				START_TIMING(PostRender)
-				mpUpdater->RunMessage(eUpdateableMessage_OnPostRender, mfFrameTime);
-				STOP_TIMING(PostRender)
-				
-				START_TIMING(FlushRender)
-				mpGraphics->GetLowLevel()->FlushRendering();
-				STOP_TIMING(FlushRender)
-				
-				//Update fps counter.
-				mpFPSCounter->AddFrame();
-	           	
-				fNumOfTimes++;
-				bIsUpdated = false;
-				bBufferSwap = true;
+					UpdateFrameTimer();
+
+					//On draw callback sending that to gui, etc
+					START_TIMING(OnDraw)
+						mpUpdater->RunMessage(eUpdateableMessage_OnDraw, mfFrameTime);
+					STOP_TIMING(OnDraw)
+
+					//Render this frame
+					START_TIMING(RenderAll)
+						mpScene->Render(mfFrameTime, tSceneRenderFlag_All);
+					STOP_TIMING(RenderAll)
+
+					START_TIMING(PostRender)
+						mpUpdater->RunMessage(eUpdateableMessage_OnPostRender, mfFrameTime);
+					STOP_TIMING(PostRender)
+
+					START_TIMING(FlushRender)
+						mpGraphics->GetLowLevel()->FlushRendering();
+					STOP_TIMING(FlushRender)
+
+					//Update fps counter.
+					mpFPSCounter->AddFrame();
+
+					fNumOfTimes++;
+					bIsUpdated = false;
+					bBufferSwap = true;
+
+					if (gpVR)
+						gpVR->CopyFrameBufferToSwapchain();
+
+					// GL END RENDER
+
+					gpVR->ReleaseSwapchain(eye);
+				}
+				gpVR->PostRender();
 			}
-
 			//if(GetGameIsDone()) Log("4\n");
 		}
 		Log("--------------------------------------------------------\n\n");

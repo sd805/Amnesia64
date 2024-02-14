@@ -39,6 +39,8 @@
 
 #include "LuxDebugHandler.h"
 
+#include "vr/VR.h"
+
 //////////////////////////////////////////////////////////////////////////
 // ACTION LISTS
 //////////////////////////////////////////////////////////////////////////
@@ -1104,9 +1106,10 @@ void cLuxInputHandler::UpdateGamePlayerInput()
 	if(mpInput->BecameTriggerd(eLuxAction_Run))	mpPlayer->Run(true);
 	if(mpInput->WasTriggerd(eLuxAction_Run))	mpPlayer->Run(false);
 
+	const cVR::InputValues& vrInputs = gpVR->mInputValues;
 	//Jump
-	if(mpInput->BecameTriggerd(eLuxAction_Jump))mpPlayer->Jump(true);
-	if(mpInput->WasTriggerd(eLuxAction_Jump))	mpPlayer->Jump(false);
+	if(vrInputs.jumpValue.currentState) mpPlayer->Jump(true);
+	else mpPlayer->Jump(false);
 
 	//Crouch
 	if(mpInput->BecameTriggerd(eLuxAction_Crouch))mpPlayer->Crouch(true);

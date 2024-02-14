@@ -106,11 +106,11 @@ namespace hpl {
 	{ 
 		mfPitch = afAngle;
 		
-		if(mfPitchLimitMin!=0 || mfPitchLimitMax!=0)
+		/*if(mfPitchLimitMin!=0 || mfPitchLimitMax!=0)
 		{
 			if(mfPitch> mfPitchLimitMax) mfPitch = mfPitchLimitMax;
 			if(mfPitch< mfPitchLimitMin) mfPitch = mfPitchLimitMin;
-		}
+		}*/
 
 		mbViewUpdated = true; mbMoveUpdated = true;
 		mbFrustumUpdated = true;
@@ -119,11 +119,11 @@ namespace hpl {
 	{ 
 		mfYaw = afAngle;
 
-		if(mfYawLimitMin!=0 || mfYawLimitMax!=0)
+		/*if(mfYawLimitMin!=0 || mfYawLimitMax!=0)
 		{
 			if(mfYaw> mfYawLimitMax) mfYaw = mfYawLimitMax;
 			if(mfYaw< mfYawLimitMin) mfYaw = mfYawLimitMin;
-		}
+		}*/
 		
 		mbViewUpdated = true; mbMoveUpdated = true;
 		mbFrustumUpdated = true;

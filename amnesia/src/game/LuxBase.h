@@ -28,6 +28,8 @@
 
 //----------------------------------------------
 
+class VR;
+
 class cLuxMapHandler;
 class cLuxMapHelper;
 class cLuxInputHandler;

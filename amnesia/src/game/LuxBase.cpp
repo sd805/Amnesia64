@@ -95,6 +95,8 @@
 #include "LuxCommentaryIcon.h"
 #include "LuxAchievementHandler.h"
 
+#include "vr/VR.h"
+
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -1101,7 +1103,7 @@ bool cLuxBase::InitEngine()
 	//RaiseCrashFlag();
 
 	cEngineInitVars vars;
-	vars.mGraphics.mvScreenSize =  mpConfigHandler->mvScreenSize;
+	vars.mGraphics.mvScreenSize = { 2704, 2736 }; //mpConfigHandler->mvScreenSize;
 	vars.mGraphics.mlDisplay = mpConfigHandler->mlDisplay;
 	vars.mGraphics.mbFullscreen =  mpConfigHandler->mbFullscreen;
 	vars.mGraphics.msWindowCaption = msGameName + " Loading...";

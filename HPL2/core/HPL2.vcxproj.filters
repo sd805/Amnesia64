@@ -73,6 +73,9 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{0276fcca-4f7b-4ed6-9450-82896f0b1ffc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="VR">
+      <UniqueIdentifier>{3c65ae69-7a2e-4daa-be53-fa97fe1858c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\system\BinTree.h">
@@ -1063,6 +1066,9 @@
     <ClInclude Include="include\impl\GamepadSDL2.h">
       <Filter>Impl\Input</Filter>
     </ClInclude>
+    <ClInclude Include="include\vr\VR.h">
+      <Filter>VR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sources\system\Container.cpp">
@@ -1937,6 +1943,9 @@
     </ClCompile>
     <ClCompile Include="sources\impl\GamepadSDL2.cpp">
       <Filter>Impl\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\vr\VR.cpp">
+      <Filter>VR</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

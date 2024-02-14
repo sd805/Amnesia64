@@ -28,6 +28,9 @@
 #include "graphics/GPUShader.h"
 #include "graphics/PostEffect.h"
 #include "graphics/VertexBuffer.h"
+#include "graphics/PostEffect_RadialBlur.h"
+#include "graphics/PostEffect_ImageTrail.h"
+#include "graphics/PostEffect_ColorConvTex.h"
 
 namespace hpl {
 
@@ -89,6 +92,10 @@ namespace hpl {
 		for(; it!= m_mapPostEffects.end(); ++it)
 		{
 			iPostEffect *pPostEffect =it->second;
+
+			if (dynamic_cast<cPostEffect_ImageTrail *>(pPostEffect))
+				continue; // This effect causes issues in VR
+
 			if(pPostEffect->IsActive()==false) continue;
 		
 			bool bLastEffect = pPostEffect == pLastEffect;

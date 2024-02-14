@@ -47,6 +47,11 @@
 
 #include "physics/Physics.h"
 
+#include "vr/VR.h"
+#include "math/Math.h"
+
+#include <iostream>
+
 
 namespace hpl {
 
@@ -197,7 +202,46 @@ namespace hpl {
 			bool bPostEffects = false;
 			iRenderer *pRenderer = pViewPort->GetRenderer();
 			cCamera *pCamera = pViewPort->GetCamera();
-			cFrustum *pFrustum = pCamera ? pCamera->GetFrustum() : NULL;
+
+			if (gpVR && pCamera)
+			{
+				cMatrixf myMat{};
+				gpVR->QuaternionToRotationMat(&myMat, &gpVR->mRawHmdOrientation);
+
+				static float fov = gpVR->mFOV; 
+				static float aspect = gpVR->mAspect;
+
+				float newFov = cMath::ToRad(fov);
+
+				pCamera->SetFOV(newFov);
+				pCamera->SetAspect(aspect);
+
+				float pitch = -asin(myMat.m[2][1]);
+				float yaw = atan2f(myMat.m[2][0], myMat.m[2][2]);
+				float roll = -atan2f(-myMat.m[0][1], myMat.m[1][1]);
+
+				pCamera->SetYaw(yaw);
+				pCamera->SetPitch(pitch);
+				pCamera->SetRoll(roll);
+			}
+
+			cVector3f origPos = pCamera ? pCamera->GetPosition() : cVector3f{0,0,0};
+
+			cFrustum *pFrustum = NULL;
+			if (gpVR && gpVR->mCurrentEye != -1 && pCamera)
+			{
+				auto xrHmdPos = gpVR->view_in_stage2.pose.position;
+				cVector3f hmdPos = { xrHmdPos.x, xrHmdPos.y, xrHmdPos.z };
+
+				auto xrEyePos = gpVR->m_views[gpVR->mCurrentEye].pose.position;
+				cVector3f eyePos = { xrEyePos.x, xrEyePos.y, xrEyePos.z };
+
+				// Make the camera height match the game's intended camera height
+				static cVector3f camOffset = hmdPos * -1;
+
+				pCamera->SetPosition(eyePos + origPos + camOffset);
+				pFrustum = pCamera ? pCamera->GetFrustum() : NULL;
+			}
 
 			//////////////////////////////////////////////
 			//Render world and call callbacks
@@ -259,6 +303,8 @@ namespace hpl {
 				RenderScreenGui(pViewPort, afFrameTime);
 				STOP_TIMING(RenderGUI)
 			}
+
+			if(pCamera) pCamera->SetPosition(origPos);
 		}
 	}
 
